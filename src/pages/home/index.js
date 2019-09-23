@@ -5,6 +5,9 @@ const Home = () => {
     return(
         <article className='container-index'>
             Hello Home
+            <i class="fas fa-user"></i>
+            <i class="far fa-user"></i> 
+            <i class="fal fa-user"></i>
         </article>
     )
 }
