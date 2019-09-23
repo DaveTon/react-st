@@ -1,0 +1,76 @@
+/* 
+ * --- 3MEdu TECH CONFIDENTIAL ---
+ * 
+ * Copyright (c) 2017-present 3MEdu TECH Company Limited 
+ * All Rights Reserved.
+ */
+
+
+ * {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, img, a, ul, li, p, i {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-style: normal;
+    font-weight: $font-weight-bold;
+    font-family: $font-family;
+}
+
+body,html{
+    height:100%;
+    width: 100%;
+}
+
+html {
+    font-size: $font-size-small; //12px
+    line-height: 1.2;
+}
+body {
+    font-weight: $font-weight-bold;
+    background-color: $web-background-color;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-width: $width-base;
+    font-family: $font-family;
+    font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+ul, li {
+    list-style: none;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: $web-initial-fonts-color; //#909090 rgba(144, 144, 144, 1)
+}
+
+input, button, textarea {
+    outline: none;
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+
+figure {
+    margin: 0;
+}
+
+// 設置網站寬度百分比
+.eu-col-11 { width: (100%/12)*11!important;}
+.eu-col-10 { width: (100%/12)*10!important;}
+.eu-col-9  { width: (100%/12)* 9!important;}
+.eu-col-8  { width: (100%/12)* 8!important;}
+.eu-col-7  { width: (100%/12)* 7!important;}
+.eu-col-6  { width: (100%/12)* 6!important;}
+.eu-col-5  { width: (100%/12)* 5!important;}
+.eu-col-4  { width: (100%/12)* 4!important;}
+.eu-col-3  { width: (100%/12)* 3!important;}
