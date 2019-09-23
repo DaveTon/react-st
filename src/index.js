@@ -12,5 +12,5 @@ const APP = (
 
 const rootElement = document.getElementById('root');
 
-ReactDOM.render(<APP />, rootElement);
+ReactDOM.render(APP, rootElement);
 
