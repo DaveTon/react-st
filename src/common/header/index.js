@@ -13,6 +13,10 @@ const Header = () => {
                     <img src={Logo} alt='nav-logo' />
                 </div>
             </Link>
+
+            <section className='header-content-wrap'>
+                <div className='content-list'></div>
+            </section>
             
             
         </header>
