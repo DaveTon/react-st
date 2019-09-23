@@ -15,9 +15,10 @@ const Header = () => {
             </Link>
 
             <section className='header-content-wrap'>
-                <div className='content-list'></div>
+                <div className='content-left'></div>
+                
+                <div className='content-right'></div>
             </section>
-            
             
         </header>
     )
