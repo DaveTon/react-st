@@ -8,10 +8,9 @@ export default class Router extends React.Component{
     render(){
         return(
             <div className='eu-container'>
-
-                <Header />
-
                 <HashRouter>
+                    <Header />
+                    
                     <Switch>
                         <Route exact path='/' component={Home} />
                     </Switch>

@@ -1,9 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+
+import Logo from './../../resource/imgs/header/logo.png';
 
 const Header = () => {
     return(
-        <div>Hello Header</div>
+        <header className='eu-header'>
+
+            <Link to='/'>
+                <div className='eu-logo'>
+                    <img src={Logo} alt='nav-logo' />
+                </div>
+            </Link>
+            
+            
+        </header>
     )
 }
 
