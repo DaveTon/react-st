@@ -16,8 +16,7 @@ h1, h2, h3, h4, h5, h6, img, a, ul, li, p, i {
     border: 0;
     outline: 0;
     font-style: normal;
-    font-weight: $font-weight-bold;
-    font-family: $font-family;
+    font-weight: 600;
 }
 
 body,html{
@@ -26,17 +25,16 @@ body,html{
 }
 
 html {
-    font-size: $font-size-small; //12px
+    font-size: 12px;
     line-height: 1.2;
 }
 body {
-    font-weight: $font-weight-bold;
-    background-color: $web-background-color;
+    font-weight: 600;
+    background-color: #fff;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    min-width: $width-base;
-    font-family: $font-family;
+    min-width: 1024px;
     font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -49,7 +47,7 @@ ul, li {
 
 a {
     text-decoration: none;
-    color: $web-initial-fonts-color; //#909090 rgba(144, 144, 144, 1)
+    color: #909090;
 }
 
 input, button, textarea {
