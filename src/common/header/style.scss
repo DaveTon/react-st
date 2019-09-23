@@ -1,0 +1,30 @@
+.eu-header{
+    background-color: #fff;
+    position: relative;
+
+    .wrap{
+        min-width: 768px;
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    &:before{
+        content: '';
+        height: 1px;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #f0f0f0;
+    }
+}
+
+.eu-logo{
+    height: 56px;
+    padding: 0;
+
+    .img{
+        height: 100%;
+    }
+}
