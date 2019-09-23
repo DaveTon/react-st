@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const Home = () => {
+const Follow = () => {
     return(
-        <article className='container-index'>
-            Hello Home
+        <article className='container-follow'>
+            Hello Follow
         </article>
     )
 }
@@ -17,4 +17,4 @@ const Home = () => {
 
 // }
 
-export default connect(null, null)(Home);
+export default connect(null, null)(Follow);
