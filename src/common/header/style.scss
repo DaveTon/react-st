@@ -1,6 +1,9 @@
 .eu-header{
     background-color: #fff;
     position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
 
     .wrap{
         min-width: 768px;
@@ -26,5 +29,35 @@
 
     .img{
         height: 100%;
+    }
+}
+
+.navbar-nav{
+    display: flex;
+}
+
+.eu-button{
+    color: #333;
+    font-size: 17px;
+    line-height: 26px;
+    cursor: pointer;
+    outline: none;
+
+    &.home{
+        margin-right: 10px;
+        display: flex;
+    }
+
+    &.active{
+        color: #ea6f5a;
+    }
+
+    .fa-user{
+        display: inherit;
+        font-size: 20px;
+    }
+
+    .label{
+        
     }
 }

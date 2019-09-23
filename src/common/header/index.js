@@ -17,7 +17,14 @@ const Header = () => {
                 </Link>
 
                 <section className='header-content-wrap'>
-                    <div className='content-left'></div>
+                    <div className='navbar-nav'>
+                        <Link to='/'>
+                            <button className='eu-button home active'>
+                                <i className="fas fa-user"></i>
+                                <label className='label'>首页</label>
+                            </button>
+                        </Link>
+                    </div>
                     
                     <div className='content-right'></div>
                 </section>
