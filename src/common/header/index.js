@@ -20,46 +20,45 @@ const Header = () => {
                     <Link to='/'>
                         <button className='eu-button home active'>
                             <i className="icon find"></i>
-                            <label className='label'>首页</label>
+                            <span className='label'>首页</span>
                         </button>
                     </Link>
 
-                    <Link to='/'>
-                        <button className='eu-button follow'>
-                            <i className="icon follow"></i>
-                            <label className='label'>关注</label>
-                        </button>
-                    </Link>
-
-                    <Link to='/'>
-                        <button className='eu-button massage'>
-                            <i className="icon msg"></i>
-                            <label className='label'>消息</label>
-                        </button>
-                    </Link>
                 </section>
 
                 <section className='nav-wrap nav'>
                     <Link to='/'>
                         <button className='eu-button home active'>
                             <i className="icon find"></i>
-                            <label className='label'>首页</label>
+                            <span className='label'>首页</span>
                         </button>
                     </Link>
 
                     <Link to='/follow'>
                         <button className='eu-button follow'>
                             <i className="icon follow"></i>
-                            <label className='label'>关注</label>
+                            <span className='label'>关注</span>
                         </button>
                     </Link>
 
                     <Link to='/'>
                         <button className='eu-button massage'>
                             <i className="icon msg"></i>
-                            <label className='label'>消息</label>
+                            <span className='label'>消息</span>
                         </button>
                     </Link>
+
+                    <div className='eu-search'>
+                        <form target="_blank" action="/search" accept-charset="UTF-8" method="get">
+                            <div className='eu-wrap'>
+                                <input className='eu-input' placeholder='请输入内容' />
+                                <button className='eu-button normal'>
+                                    <i className="icon search"></i>
+                                </button>
+                            </div>
+                            <div className='eu-list'></div>
+                        </form>
+                    </div>
                 </section>
                 
             </div>
