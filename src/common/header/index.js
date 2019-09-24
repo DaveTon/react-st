@@ -17,7 +17,7 @@ const Header = () => {
                 </Link>
 
                 <section className='header-content-wrap'>
-                    <div className='navbar-nav'>
+                    <div className='nav navbar'>
                         <Link to='/'>
                             <button className='eu-button home active'>
                                 <i className="fas fa-user"></i>
@@ -26,7 +26,7 @@ const Header = () => {
                         </Link>
                     </div>
                     
-                    <div className='content-right'></div>
+                    <div className='nav'></div>
                 </section>
                 
             </div>

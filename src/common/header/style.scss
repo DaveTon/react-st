@@ -32,6 +32,16 @@
     }
 }
 
+.header-content-wrap{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .nav{
+        flex: 1;
+    }
+}
+
 .navbar-nav{
     display: flex;
 }
