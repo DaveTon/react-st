@@ -35,15 +35,20 @@
 .header-content-wrap{
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 960px;
+    margin: 0 auto;
 
     .nav{
         flex: 1;
     }
 }
 
-.navbar-nav{
+.nav{
     display: flex;
+
+    &.detail{
+        justify-content: flex-end;
+    }
 }
 
 .eu-button{

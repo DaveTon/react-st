@@ -24,9 +24,44 @@ const Header = () => {
                                 <label className='label'>首页</label>
                             </button>
                         </Link>
+
+                        <Link to='/'>
+                            <button className='eu-button follow'>
+                                <i className="icon follow"></i>
+                                <label className='label'>关注</label>
+                            </button>
+                        </Link>
+
+                        <Link to='/'>
+                            <button className='eu-button massage'>
+                                <i className="icon msg"></i>
+                                <label className='label'>消息</label>
+                            </button>
+                        </Link>
                     </div>
                     
-                    <div className='nav'></div>
+                    <div className='nav detail'>
+                        <Link to='/'>
+                            <button className='eu-button home active'>
+                                <i className="icon find"></i>
+                                <label className='label'>首页</label>
+                            </button>
+                        </Link>
+
+                        <Link to='/'>
+                            <button className='eu-button follow'>
+                                <i className="icon follow"></i>
+                                <label className='label'>关注</label>
+                            </button>
+                        </Link>
+
+                        <Link to='/'>
+                            <button className='eu-button massage'>
+                                <i className="icon msg"></i>
+                                <label className='label'>消息</label>
+                            </button>
+                        </Link>
+                    </div>
                 </section>
                 
             </div>
