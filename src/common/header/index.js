@@ -51,12 +51,28 @@ const Header = () => {
                     <div className='eu-search active'>
                         <div className='eu-wrap'>
                             <input className='eu-input' placeholder='请输入内容' />
-                            <button className='eu-button normal'>
+                            <button className='eu-button normal circle'>
                                 <i className="icon search"></i>
                             </button>
                         </div>
                         <div className='eu-list'>
-                            <div></div>
+                            <div className='hot-search'>
+
+                                <div className='header-group'>
+                                    <h2 className='title'>热门搜索</h2>
+                                    <button className='eu-button normal'>
+                                        <i className="icon msg"></i>
+                                        <span className='label'>换一批</span>
+                                    </button>
+                                </div>
+
+                                <div className='search-tag'>
+
+                                </div>
+                            </div>
+                            <div className='search-history'>
+
+                            </div>
                         </div>
                     </div>
                 </section>
