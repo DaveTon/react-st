@@ -59,9 +59,9 @@ const Header = () => {
                             <div className='hot-search'>
 
                                 <div className='header-group'>
-                                    <h2 className='title'>热门搜索</h2>
+                                    <h3 className='title'>热门搜索</h3>
                                     <button className='eu-button normal'>
-                                        <i className="icon msg"></i>
+                                        <i className="icon switch"></i>
                                         <span className='label'>换一批</span>
                                     </button>
                                 </div>
