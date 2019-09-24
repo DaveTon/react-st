@@ -42,15 +42,6 @@
 
     &.list{
         float: right;
-        display: flex;
-    }
-}
-
-.nav{
-    display: flex;
-
-    &.detail{
-        justify-content: flex-end;
     }
 }
 
@@ -64,7 +55,6 @@
 
     &.home{
         margin-right: 10px;
-        display: flex;
     }
 
     &.active{
@@ -79,9 +69,5 @@
         &::before{
             line-height: 26px;
         }
-    }
-
-    .label{
-        
     }
 }
