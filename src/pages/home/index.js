@@ -1,9 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import './style.scss';
+
 const Home = () => {
     return(
-        <article className='container-index'>
+        <article className='container'>
             Hello Home
         </article>
     )

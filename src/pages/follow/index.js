@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 const Follow = () => {
     return(
-        <article className='container-follow'>
+        <article className='container'>
             Hello Follow
         </article>
     )
