@@ -16,26 +16,30 @@
   -moz-osx-font-smoothing: grayscale;
 
   &.search::before{
-    content: '\e60b';
+    content: '\e615';
   }
 
   &.assets::before{
-    content: '\e677';
+    content: '\e67e';
   }
 
   &.msg::before{
-    content: '\e762';
+    content: '\e608';
   }
 
   &.edit::before{
-    content: '\e607';
+    content: '\e62c';
   }
 
   &.find::before{
-    content: '\e606';
+    content: '\e654';
   }
 
   &.follow::before{
-    content: '\e75e';
+    content: '\e67e';
+  }
+
+  &.switch::before{
+    content: '\e61b';
   }
 }

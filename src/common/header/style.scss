@@ -89,7 +89,7 @@
         .eu-input{
             width: 250px;
         }
-        .eu-button{
+        .eu-button.circle{
             background-color: #999;
             color: #fff;
         }
@@ -158,4 +158,5 @@
 
 .header-group{
     display: flex;
+    justify-content: space-between;
 }
