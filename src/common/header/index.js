@@ -49,15 +49,13 @@ const Header = () => {
                     </Link>
 
                     <div className='eu-search'>
-                        <form target="_blank" action="/search" accept-charset="UTF-8" method="get">
-                            <div className='eu-wrap'>
-                                <input className='eu-input' placeholder='请输入内容' />
-                                <button className='eu-button normal'>
-                                    <i className="icon search"></i>
-                                </button>
-                            </div>
-                            <div className='eu-list'></div>
-                        </form>
+                        <div className='eu-wrap'>
+                            <input className='eu-input' placeholder='请输入内容' />
+                            <button className='eu-button normal'>
+                                <i className="icon search"></i>
+                            </button>
+                        </div>
+                        <div className='eu-list'></div>
                     </div>
                 </section>
                 
