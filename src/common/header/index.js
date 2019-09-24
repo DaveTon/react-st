@@ -48,14 +48,16 @@ const Header = () => {
                         </button>
                     </Link>
 
-                    <div className='eu-search'>
+                    <div className='eu-search active'>
                         <div className='eu-wrap'>
                             <input className='eu-input' placeholder='请输入内容' />
                             <button className='eu-button normal'>
                                 <i className="icon search"></i>
                             </button>
                         </div>
-                        <div className='eu-list'></div>
+                        <div className='eu-list'>
+                            <div></div>
+                        </div>
                     </div>
                 </section>
                 
