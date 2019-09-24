@@ -20,7 +20,7 @@ const Header = () => {
                     <div className='nav navbar'>
                         <Link to='/'>
                             <button className='eu-button home active'>
-                                <i className="fas fa-user"></i>
+                                <i className="icon find"></i>
                                 <label className='label'>首页</label>
                             </button>
                         </Link>

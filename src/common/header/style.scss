@@ -50,6 +50,7 @@
     color: #333;
     font-size: 17px;
     line-height: 26px;
+    padding: 15px;
     cursor: pointer;
     outline: none;
 
@@ -62,9 +63,14 @@
         color: #ea6f5a;
     }
 
-    .fa-user{
+    .icon{
         display: inherit;
         font-size: 20px;
+        margin-right: 6px;
+
+        &::before{
+            line-height: 26px;
+        }
     }
 
     .label{
