@@ -9,7 +9,7 @@
         min-width: 768px;
         max-width: 1440px;
         margin: 0 auto;
-        display: flex;
+        height: 56px;   
     }
 
     &:before{
@@ -26,20 +26,23 @@
 .eu-logo{
     height: 56px;
     padding: 0;
+    float: left;
 
     .img{
         height: 100%;
     }
 }
 
-.header-content-wrap{
-    display: flex;
-    justify-content: space-between;
-    width: 960px;
-    margin: 0 auto;
+.nav-wrap{
 
-    .nav{
-        flex: 1;
+    &.nav{
+        width: 960px;
+        margin: auto;
+    }
+
+    &.list{
+        float: right;
+        display: flex;
     }
 }
 
