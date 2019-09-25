@@ -134,6 +134,7 @@
 
 .eu-list{
     width: 250px;
+    max-height: 320px;
     background-color: #fff;
     box-shadow: 0px 0px 12px rgba(153, 153, 153, .4);
     position: absolute;
@@ -141,8 +142,7 @@
     left: 0;
     margin-top: 10px;
     margin-left: 12px;
-    padding: 12px;
-    height: 300px;
+    padding: 12px 6px;
     border-radius: 5px;
 
     &:after{
@@ -183,7 +183,9 @@
 
 .hot-search{
     position: relative;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+    margin-left: 8px;
+    margin-right: 8px;
 
     &:after{
         content: '';
@@ -195,13 +197,13 @@
         left: 0;
         display: block;
         background-color: #ddd;
-        margin-top: 12px;
+        margin-top: 8px;
     }
 }
 
 .eu-button.small{
     font-size: 11px;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     padding: 2px 6px;
     height: 22px;
     min-width: 36px;
@@ -209,4 +211,30 @@
     border: 1px solid #bbb;
     line-height: 17px;
     color: #777;
+}
+
+.history-tag{
+    .eu-button{
+        width: 100%;
+        margin-right: 0!important;
+        padding: 4px 8px;
+        text-align: left;
+        border-radius: 5px;
+        font-size: 14px;
+        line-height: 26px;
+        position: relative; 
+    }
+
+    .eu-button{
+        &::before{
+            visibility: hidden;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(-8px, -50%);
+        }
+        &:hover::before{
+            visibility: visible;
+        }
+    }
 }

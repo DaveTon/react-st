@@ -97,7 +97,24 @@ const Header = () => {
                                 </div>
                             </div>
                             <div className='search-history'>
-
+                                <div className='history-tag'>
+                                    <button className='eu-button icon close'>
+                                        <i className="icon clock"></i>
+                                        <span className='label'>前端</span>
+                                    </button>
+                                    <button className='eu-button icon close'>
+                                        <i className="icon clock"></i>
+                                        <span className='label'>微信</span>
+                                    </button>
+                                    <button className='eu-button icon close'>
+                                        <i className="icon clock"></i>
+                                        <span className='label'>设计</span>
+                                    </button>
+                                    <button className='eu-button icon close'>
+                                        <i className="icon clock"></i>
+                                        <span className='label'>Python</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>

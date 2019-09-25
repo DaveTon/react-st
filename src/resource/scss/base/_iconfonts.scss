@@ -19,8 +19,12 @@
     content: '\e615';
   }
 
-  &.assets::before{
-    content: '\e67e';
+  &.close::before{
+    content: '\e600';
+  }
+
+  &.clock::before{
+    content: '\e60e';
   }
 
   &.msg::before{
