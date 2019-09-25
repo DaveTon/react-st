@@ -51,22 +51,41 @@
         display: flex;
         align-items: center;
         flex-direction: row-reverse;
+    }
 
-        .eu-button{
-            padding: 0;
+    .eu-button.btn{
+        padding: 0;
+        height: 40px;
+        margin: 8px 0;
+        width: 120px;
+        background-color: #ea6f5a;
+        border-radius: 50px;
+        color: #fff;
+
+        &:hover{
+            background-color: #ea705acb;    
+        }
+    }
+
+    .eu-button.img{
+        display: flex;
+        align-items: center;
+        padding: 8px;
+
+        .img{
             height: 40px;
-            margin: 8px 0;
-            width: 120px;
-            background-color: #ea6f5a;
-            border-radius: 50px;
-            color: #fff;
+            width: 40px;
+            border-radius: 20px;
+            margin-right: 8px;
+        }
 
-            &:hover{
-                background-color: #ea705acb;    
-            }
+        .icon{
+            font-size: 24px;
+            margin: 0;
         }
     }
 }
+
 
 .eu-button{
     cursor: pointer;
@@ -266,10 +285,38 @@
 
 .eu-dropdown{
     position: relative;
+    margin-right: 20px;
 
     .drop-list{
         position: absolute;
         top: 100%;
         left: 0;
+        min-width: 160px;
+        background-color: #fff;
+        box-shadow: 0 1px 6px 0 #eee;
+        z-index: 10;
+        /* display: none; */
+        float: left;
+        min-width: 160px;
+        padding: 5px 0;
+        margin: 2px 0 0;
+        list-style: none;
+        font-size: 14px;
+        text-align: left;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        background-clip: padding-box;
+
+        .eu-button{
+            padding: 10px 20px;
+            line-height: 30px;
+            display: block;
+            padding: 3px 20px;
+            color: #333;
+            white-space: nowrap;
+            width: 100%;
+            text-align: left;
+        }
     }
 }

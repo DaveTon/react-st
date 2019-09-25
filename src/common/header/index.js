@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import './style.scss';
 
 import Logo from './../../resource/imgs/header/logo.png';
+import head from './../../resource/imgs/header/head-test.jpg';
 
 const Header = () => {
     return(
@@ -25,11 +26,12 @@ const Header = () => {
                     {/* </Link> */}
 
                     <div className='eu-dropdown'>
-                        <button className='eu-button'>
-                            <i className="icon edit"></i>
+                        <button className='eu-button img'>
+                            <img className='img' src={head} alt='user' />
+                            <i className="icon dropdown"></i>
                         </button>
                         <div className='drop-list'>
-                            <button className='eu-button btn'>
+                            <button className='eu-button normal'>
                                 <i className="icon user"></i>
                                 <span className='label'>我的主页</span>
                             </button>
