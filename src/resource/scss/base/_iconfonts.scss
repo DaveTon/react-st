@@ -51,6 +51,8 @@
     content: '\e613';
   }
 
+  // --- user ---
+
   &.user::before{
     content: '\e61f';
   }
@@ -81,5 +83,35 @@
 
   &.exit::before{
     content: '\e659';
+  }
+
+  // --- massage --
+
+  &.comments::before{
+    content: '\e646';
+  }
+
+  &.chats::before{
+    content: '\e624';
+  }
+
+  &.requests::before{
+    content: '\e609';
+  }
+
+  &.likes::before{
+    content: '\e614';
+  }
+
+  &.follows::before{
+    content: '\e685';
+  }
+
+  &.money::before{
+    content: '\e634';
+  }
+
+  &.others::before{
+    content: '\e66b';
   }
 }

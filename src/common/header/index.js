@@ -64,7 +64,7 @@ const Header = () => {
 
                             <button className='eu-button normal list'>
                                 <i className="icon help"></i>
-                                <span className='label'>帮组与反馈</span>
+                                <span className='label'>帮助与反馈</span>
                             </button>
 
                             <button className='eu-button normal list'>
@@ -101,49 +101,45 @@ const Header = () => {
 
                     <div className='eu-dropdown'>
                         <button className='eu-button nav massage'>
-                            <i className="icon msg"></i>
-                            <span className='label'>消息</span>
+                            <i className="icon comments"></i>
+                            <span className='label'>评论</span>
                         </button>
                         <div className='drop-list'>
                             <button className='eu-button normal list'>
-                                <i className="icon user"></i>
-                                <span className='label'>我的主页</span>
+                                <i className="icon comments"></i>
+                                <span className='label'>评论</span>
                             </button>
 
                             <button className='eu-button normal list'>
-                                <i className="icon bookmark"></i>
-                                <span className='label'>收藏的文章</span>
+                                <i className="icon chats"></i>
+                                <span className='label'>简信</span>
                             </button>
 
                             <button className='eu-button normal list'>
-                                <i className="icon like"></i>
-                                <span className='label'>喜欢的文章</span>
+                                <i className="icon requests"></i>
+                                <span className='label'>投稿请求</span>
                             </button>
 
                             <button className='eu-button normal list'>
-                                <i className="icon paid"></i>
-                                <span className='label'>已购内容</span>
+                                <i className="icon likes"></i>
+                                <span className='label'>喜欢和赞</span>
                             </button>
 
                             <button className='eu-button normal list'>
-                                <i className="icon vallet"></i>
-                                <span className='label'>我的钱包</span>
+                                <i className="icon follows"></i>
+                                <span className='label'>关注</span>
                             </button>
 
                             <button className='eu-button normal list'>
-                                <i className="icon set"></i>
-                                <span className='label'>设置</span>
+                                <i className="icon money"></i>
+                                <span className='label'>赞赏和付费</span>
                             </button>
 
                             <button className='eu-button normal list'>
-                                <i className="icon help"></i>
-                                <span className='label'>帮组与反馈</span>
+                                <i className="icon others"></i>
+                                <span className='label'>其他提醒</span>
                             </button>
 
-                            <button className='eu-button normal list'>
-                                <i className="icon exit"></i>
-                                <span className='label'>退出</span>
-                            </button>
                         </div>
                     </div>
 
