@@ -50,6 +50,7 @@
         float: right;
         display: flex;
         align-items: center;
+        flex-direction: row-reverse;
 
         .eu-button{
             padding: 0;

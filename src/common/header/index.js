@@ -18,11 +18,18 @@ const Header = () => {
 
                 <section className='nav-wrap list'>
                     {/* <Link to='/'> */}
-                        <button className='eu-button'>
+                        <button className='eu-button btn'>
                             <i className="icon edit"></i>
                             <span className='label'>写文章</span>
                         </button>
                     {/* </Link> */}
+
+                    <div className='eu-dropdown'>
+                        <button className='eu-button'>
+                            <i className="icon edit"></i>
+                        </button>
+
+                    </div>
 
                 </section>
 

@@ -46,4 +46,40 @@
   &.switch::before{
     content: '\e61b';
   }
+
+  &.vallet::before{
+    content: '\e613';
+  }
+
+  &.user::before{
+    content: '\e61f';
+  }
+
+  &.dropdown::before{
+    content: '\ec0f';
+  }
+
+  &.bookmark::before{
+    content: '\e610';
+  }
+
+  &.set::before{
+    content: '\e61d';
+  }
+
+  &.paid::before{
+    content: '\e639';
+  }
+
+  &.like::before{
+    content: '\e645';
+  }
+
+  &.help::before{
+    content: '\e61c';
+  }
+
+  &.exit::before{
+    content: '\e659';
+  }
 }
