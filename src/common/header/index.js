@@ -28,7 +28,12 @@ const Header = () => {
                         <button className='eu-button'>
                             <i className="icon edit"></i>
                         </button>
-
+                        <div className='drop-list'>
+                            <button className='eu-button btn'>
+                                <i className="icon user"></i>
+                                <span className='label'>我的主页</span>
+                            </button>
+                        </div>
                     </div>
 
                 </section>
