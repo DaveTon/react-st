@@ -17,12 +17,12 @@ const Header = () => {
                 </Link>
 
                 <section className='nav-wrap list'>
-                    <Link to='/'>
-                        <button className='eu-button home active'>
-                            <i className="icon find"></i>
-                            <span className='label'>首页</span>
+                    {/* <Link to='/'> */}
+                        <button className='eu-button'>
+                            <i className="icon edit"></i>
+                            <span className='label'>写文章</span>
                         </button>
-                    </Link>
+                    {/* </Link> */}
 
                 </section>
 

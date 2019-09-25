@@ -48,12 +48,32 @@
 
     &.list{
         float: right;
+        display: flex;
+        align-items: center;
+
+        .eu-button{
+            padding: 0;
+            height: 40px;
+            margin: 8px 0;
+            width: 120px;
+            background-color: #ea6f5a;
+            border-radius: 50px;
+            color: #fff;
+
+            &:hover{
+                background-color: #ea705acb;    
+            }
+        }
     }
 }
 
 .eu-button{
     cursor: pointer;
     outline: none;
+
+    .icon{
+        display: inline-block;
+    }
 }
 
 .eu-button:not(.normal){
@@ -72,7 +92,6 @@
     }
 
     .icon{
-        display: inherit;
         font-size: 16px;
         margin-right: 6px;
 
@@ -243,3 +262,4 @@
         }
     }
 }
+
