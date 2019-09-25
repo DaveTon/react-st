@@ -55,7 +55,7 @@ const Header = () => {
                         </button>
                     </Link>
 
-                    <Link to='/'>
+                    <Link to='/news'>
                         <button className='eu-button massage'>
                             <i className="icon msg"></i>
                             <span className='label'>消息</span>
