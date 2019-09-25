@@ -67,7 +67,33 @@ const Header = () => {
                                 </div>
 
                                 <div className='search-tag'>
-
+                                    <button className='eu-button small'>
+                                        <span className='label'>微信</span>
+                                    </button>
+                                    <button className='eu-button small'>
+                                        <span className='label'>支付宝</span>
+                                    </button>
+                                    <button className='eu-button small'>
+                                        <span className='label'>蚂蚁金服</span>
+                                    </button>
+                                    <button className='eu-button small'>
+                                        <span className='label'>Python</span>
+                                    </button>
+                                    <button className='eu-button small'>
+                                        <span className='label'>营销QQ</span>
+                                    </button>
+                                    <button className='eu-button small'>
+                                        <span className='label'>企业QQ</span>
+                                    </button>
+                                    <button className='eu-button small'>
+                                        <span className='label'>秋分</span>
+                                    </button>
+                                    <button className='eu-button small'>
+                                        <span className='label'>容联七陌</span>
+                                    </button>
+                                    <button className='eu-button small'>
+                                        <span className='label'>良心云</span>
+                                    </button>
                                 </div>
                             </div>
                             <div className='search-history'>
