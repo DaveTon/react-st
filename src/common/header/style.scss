@@ -36,6 +36,9 @@
 }
 
 .nav-wrap{
+    >*{
+        display: inline-block;
+    }
 
     &.nav{
         width: 960px;
@@ -91,6 +94,12 @@
     .img{
         height: 25px;
     }
+}
+
+.eu-button.nav.label{
+    font-family: serif;
+    font-size: 18px;
+    font-weight: 800;
 }
 
 .eu-button{

@@ -78,6 +78,9 @@ const Header = () => {
                         <img className='img' src={assets} alt='assets' />
                     </button>
 
+                    <button className='eu-button nav label'>
+                        <span className='label'>Aa</span>
+                    </button>
 
                 </section>
 
@@ -97,10 +100,53 @@ const Header = () => {
                     </Link>
 
                     <Link to='/news'>
-                        <button className='eu-button nav massage'>
-                            <i className="icon msg"></i>
-                            <span className='label'>消息</span>
-                        </button>
+                        <div className='eu-dropdown'>
+                            <button className='eu-button nav massage'>
+                                <i className="icon msg"></i>
+                                <span className='label'>消息</span>
+                            </button>
+                            <div className='drop-list'>
+                                <button className='eu-button normal list'>
+                                    <i className="icon user"></i>
+                                    <span className='label'>我的主页</span>
+                                </button>
+
+                                <button className='eu-button normal list'>
+                                    <i className="icon bookmark"></i>
+                                    <span className='label'>收藏的文章</span>
+                                </button>
+
+                                <button className='eu-button normal list'>
+                                    <i className="icon like"></i>
+                                    <span className='label'>喜欢的文章</span>
+                                </button>
+
+                                <button className='eu-button normal list'>
+                                    <i className="icon paid"></i>
+                                    <span className='label'>已购内容</span>
+                                </button>
+
+                                <button className='eu-button normal list'>
+                                    <i className="icon vallet"></i>
+                                    <span className='label'>我的钱包</span>
+                                </button>
+
+                                <button className='eu-button normal list'>
+                                    <i className="icon set"></i>
+                                    <span className='label'>设置</span>
+                                </button>
+
+                                <button className='eu-button normal list'>
+                                    <i className="icon help"></i>
+                                    <span className='label'>帮组与反馈</span>
+                                </button>
+
+                                <button className='eu-button normal list'>
+                                    <i className="icon exit"></i>
+                                    <span className='label'>退出</span>
+                                </button>
+                            </div>
+                        </div>
                     </Link>
 
                     <div className='eu-search'>
