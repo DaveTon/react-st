@@ -48,7 +48,7 @@ const Header = () => {
                         </button>
                     </Link>
 
-                    <div className='eu-search active'>
+                    <div className='eu-search'>
                         <div className='eu-wrap'>
                             <input className='eu-input' placeholder='请输入内容' />
                             <button className='eu-button normal circle'>

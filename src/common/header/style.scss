@@ -95,6 +95,9 @@
             background-color: #999;
             color: #fff;
         }
+        .eu-list{
+            display: block;
+        }
     }
 
     .eu-wrap{
@@ -133,6 +136,7 @@
 }
 
 .eu-list{
+    display: none;
     width: 250px;
     max-height: 320px;
     background-color: #fff;
@@ -223,6 +227,7 @@
         font-size: 14px;
         line-height: 26px;
         position: relative; 
+        display: flex;
     }
 
     .eu-button{
