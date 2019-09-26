@@ -160,6 +160,13 @@ const Home = () => {
                                     <span className='label'>关注</span>
                                 </button>
                             </div>
+
+                            <div className='item find-more'>
+                                <button className='eu-button dropright'>
+                                    <i className="icon dropright"></i>
+                                    <span className='label'>查看全部</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

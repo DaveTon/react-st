@@ -353,3 +353,29 @@
         color: #ea6f5a;
     }
 }
+
+.item.find-more{
+    .eu-button{
+        padding: 7px 7px 7px 12px;
+        width: 100%;
+        font-size: 13px;
+        color: #777777;
+        background-color: #f7f7f7;
+        border: 1px solid #dcdcdc;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        line-height: 18px;
+
+        &:hover{
+            color: #525252;
+        }
+
+        .icon{
+            font-size: 12px;
+            margin: 0 8px;
+        }
+    }
+}
