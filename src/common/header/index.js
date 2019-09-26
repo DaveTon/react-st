@@ -154,7 +154,6 @@ const Header = () => {
                         </div>
                         <div className='eu-list'>
                             <div className='hot-search'>
-
                                 <div className='header-group'>
                                     <h3 className='title'>热门搜索</h3>
                                     <button className='eu-button normal'>
@@ -162,7 +161,6 @@ const Header = () => {
                                         <span className='label'>换一批</span>
                                     </button>
                                 </div>
-
                                 <div className='search-tag'>
                                     <button className='eu-button small'>
                                         <span className='label'>微信</span>
@@ -223,7 +221,7 @@ const Header = () => {
 }
 
 const mapToState = (state) => {
-
+    
 }
 
 // const mapToDispatch = (dispatch) => {
