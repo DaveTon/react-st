@@ -9,7 +9,7 @@ const Home = () => {
             <div className='note-list'>
                 <ul className='list-wrap'>
                     <li className='note-item'>
-                        <h2 className='title'>我是标题</h2>
+                        <a target='_blank' href='/'><h2 className='title'>我是标题</h2></a>
                         <p className='abstract'>我是段落</p>
                         <div className='meta'>
                             <button className='eu-button'>
@@ -25,6 +25,7 @@ const Home = () => {
                             </button>
                         </div>
                     </li>
+
                 </ul>
             </div>
             
