@@ -114,4 +114,26 @@
   &.others::before{
     content: '\e66b';
   }
+
+  // --- 
+
+  &.plus::before{
+    content: '\e647';
+  }
+  
+  &.refresh::before{
+    content: '\e6cd';
+  }
+
+  &.dropright::before{
+    content: '\e60a';
+  }
+
+  &.diamond::before{
+    content: '\e60d';
+  }
+
+  &.reward::before{
+    content: '\e611';
+  }
 }
