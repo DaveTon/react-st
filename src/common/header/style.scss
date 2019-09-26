@@ -55,19 +55,23 @@
         align-items: center;
         flex-direction: row-reverse;
     }
+}
 
-    .eu-button.btn{
-        padding: 0;
-        height: 40px;
-        margin: 8px 0;
-        width: 120px;
-        background-color: #ea6f5a;
-        border-radius: 50px;
-        color: #fff;
+.eu-button.btn{
+    padding: 0;
+    height: 40px;
+    margin: 8px 0;
+    width: 120px;
+    background-color: #ea6f5a;
+    border-radius: 50px;
+    color: #fff;
 
-        &:hover{
-            background-color: #ea705acb;    
-        }
+    &:hover{
+        background-color: #ea705acb;    
+    }
+
+    .icon{
+        margin-right: 8px;
     }
 }
 
