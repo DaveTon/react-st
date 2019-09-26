@@ -12,14 +12,14 @@ const Home = () => {
                         <a target='_blank' href='/'><h2 className='title'>我是标题</h2></a>
                         <p className='abstract'>我是段落</p>
                         <div className='meta'>
-                            <button className='eu-button'>
-                                <i className="icon comments"></i>
+                            <button className='eu-button diamond'>
+                                <i className="icon diamond"></i>
                                 <span className='label'>4726.3</span>
                             </button>
                             <button className='eu-button'>
                                 <span className='label'>简书</span>
                             </button>
-                            <button className='eu-button'>
+                            <button className='eu-button like'>
                                 <i className="icon like"></i>
                                 <span className='label'>11676</span>
                             </button>
