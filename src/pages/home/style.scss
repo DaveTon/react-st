@@ -132,10 +132,16 @@
         font-size: 14px;
         color: #666;
         font-weight: 600;
+        cursor: default;
     }
     
     .eu-button.refresh{
         color: #666;
+        opacity: .8;
+
+        &:hover{
+            opacity: 1;
+        }
     
         .icon{
             font-size: 12px;
@@ -168,6 +174,38 @@
 
     .follow{
         margin: 4px auto 4px 8px;
+
+        .title{
+            font-size: 14px;
+            display: block;
+            margin: 2px 0 4px 0;
+            padding: 1px 0;
+            font-weight: 400;
+        }
+
+        .content{
+            margin: 2px 0;
+            font-size: 12px;
+            color: #969696;
+            font-weight: 400;
+        }
+    }
+
+    .eu-button.plus{
+        margin: 4px 0 4px 4px;
+        padding: 2px 0 2px 2px;
+        font-size: 12px;
+        color: #42c02e;
+        opacity: .8;
+
+        &:hover{
+            opacity: 1;
+        }
+
+        .icon{
+            font-size: 12px;
+            margin-right: 4px;
+        }
     }
 }
 

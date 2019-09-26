@@ -141,7 +141,21 @@ const Home = () => {
                                     <h3 className='title'>无线猴子</h3>
                                     <p className='content'>寫了165.9k字 · 3.5k喜歡</p>
                                 </div>
-                                <button className='eu-button'>
+                                <button className='eu-button plus'>
+                                    <i className="icon plus"></i>
+                                    <span className='label'>关注</span>
+                                </button>
+                            </div>
+
+                            <div className='item'>
+                                <button className='eu-button img'>
+                                    <img className='img' src={head2} alt='user' />
+                                </button>
+                                <div className='follow'>
+                                    <h3 className='title'>DAVE</h3>
+                                    <p className='content'>寫了165.9k字 · 3.5k喜歡</p>
+                                </div>
+                                <button className='eu-button plus'>
                                     <i className="icon plus"></i>
                                     <span className='label'>关注</span>
                                 </button>
