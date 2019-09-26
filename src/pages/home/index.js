@@ -99,16 +99,16 @@ const Home = () => {
             <div className='aside-list'>
                 <div className='board'>
                     <a className='img-wrap' target='_bland' href='/'>
-                        <img className='img' src={banner1} alt='banner' />
+                        <img className='img' src={banner1} alt='banner1' />
                     </a>
                     <a className='img-wrap' target='_bland' href='/'>
-                        <img className='img' src={banner2} alt='banner' />
+                        <img className='img' src={banner2} alt='banner2' />
                     </a>
                     <a className='img-wrap' target='_bland' href='/'>
-                        <img className='img' src={banner3} alt='banner' />
+                        <img className='img' src={banner3} alt='banner3' />
                     </a>
                     <a className='img-wrap' target='_bland' href='/'>
-                        <img className='img' src={banner4} alt='banner' />
+                        <img className='img' src={banner4} alt='banner4' />
                     </a>
                 </div>
             </div>
