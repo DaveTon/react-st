@@ -1,11 +1,11 @@
 import * as constants from './constants';
 
-export const changeFocused = (focused) => ({
+export const changeFocused = () => ({
     type: constants.CHANGE_FOCUSED,
     focused: true
 });
 
-export const changeBlur = (focused) => ({
+export const changeBlur = () => ({
     type: constants.CHANGE_BLUR,
     focused: false
 });

@@ -16,9 +16,7 @@ export default (state = defaultState, action) => {
     // }
 
     if(action.type === constants.CHANGE_FOCUSED){
-        return{
-            focused: true
-        }
+        return state.focused = true;
     }
     if(action.type === constants.CHANGE_BLUR){
         return{
