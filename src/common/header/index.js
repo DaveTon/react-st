@@ -19,12 +19,12 @@ const Header = () => {
                 </Link>
 
                 <section className='nav-wrap list'>
-                    {/* <Link to='/'> */}
+                    <Link to='/'>
                         <button className='eu-button btn'>
                             <i className="icon edit"></i>
                             <span className='label'>写文章</span>
                         </button>
-                    {/* </Link> */}
+                    </Link>
 
                     <div className='eu-dropdown'>
                         <button className='eu-button img img-head'>
@@ -99,49 +99,51 @@ const Header = () => {
                         </button>
                     </Link>
 
-                    <div className='eu-dropdown'>
-                        <button className='eu-button nav massage'>
-                            <i className="icon comments"></i>
-                            <span className='label'>评论</span>
-                        </button>
-                        <div className='drop-list'>
-                            <button className='eu-button normal list'>
+                    <Link to='/news'>
+                        <div className='eu-dropdown'>
+                            <button className='eu-button nav massage'>
                                 <i className="icon comments"></i>
                                 <span className='label'>评论</span>
                             </button>
+                            <div className='drop-list'>
+                                <button className='eu-button normal list'>
+                                    <i className="icon comments"></i>
+                                    <span className='label'>评论</span>
+                                </button>
 
-                            <button className='eu-button normal list'>
-                                <i className="icon chats"></i>
-                                <span className='label'>简信</span>
-                            </button>
+                                <button className='eu-button normal list'>
+                                    <i className="icon chats"></i>
+                                    <span className='label'>简信</span>
+                                </button>
 
-                            <button className='eu-button normal list'>
-                                <i className="icon requests"></i>
-                                <span className='label'>投稿请求</span>
-                            </button>
+                                <button className='eu-button normal list'>
+                                    <i className="icon requests"></i>
+                                    <span className='label'>投稿请求</span>
+                                </button>
 
-                            <button className='eu-button normal list'>
-                                <i className="icon likes"></i>
-                                <span className='label'>喜欢和赞</span>
-                            </button>
+                                <button className='eu-button normal list'>
+                                    <i className="icon likes"></i>
+                                    <span className='label'>喜欢和赞</span>
+                                </button>
 
-                            <button className='eu-button normal list'>
-                                <i className="icon follows"></i>
-                                <span className='label'>关注</span>
-                            </button>
+                                <button className='eu-button normal list'>
+                                    <i className="icon follows"></i>
+                                    <span className='label'>关注</span>
+                                </button>
 
-                            <button className='eu-button normal list'>
-                                <i className="icon money"></i>
-                                <span className='label'>赞赏和付费</span>
-                            </button>
+                                <button className='eu-button normal list'>
+                                    <i className="icon money"></i>
+                                    <span className='label'>赞赏和付费</span>
+                                </button>
 
-                            <button className='eu-button normal list'>
-                                <i className="icon others"></i>
-                                <span className='label'>其他提醒</span>
-                            </button>
+                                <button className='eu-button normal list'>
+                                    <i className="icon others"></i>
+                                    <span className='label'>其他提醒</span>
+                                </button>
 
+                            </div>
                         </div>
-                    </div>
+                    </Link>
 
                     <div className='eu-search'>
                         <div className='eu-wrap'>
@@ -220,12 +222,12 @@ const Header = () => {
     )
 }
 
-// const mapToState = (state) => {
+const mapToState = (state) => {
 
-// }
+}
 
 // const mapToDispatch = (dispatch) => {
 
 // }
 
-export default connect(null, null)(Header);
+export default connect(mapToState, null)(Header);
