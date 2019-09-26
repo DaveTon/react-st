@@ -5,6 +5,10 @@ import './style.scss';
 
 import test1 from '../../resource/imgs/home/test1.jpg';
 import test2 from '../../resource/imgs/home/test2.jpg';
+import banner1 from '../../resource/imgs/home/banner-s1.png';
+import banner2 from '../../resource/imgs/home/banner-s2.png';
+import banner3 from '../../resource/imgs/home/banner-s3.png';
+import banner4 from '../../resource/imgs/home/banner-s4.png';
 
 const Home = () => {
     return(
@@ -92,7 +96,22 @@ const Home = () => {
                 </ul>
             </div>
             
-            <div className='aside-list'></div>
+            <div className='aside-list'>
+                <div className='board'>
+                    <a className='img-wrap' target='_bland' href='/'>
+                        <img className='img' src={banner1} alt='banner' />
+                    </a>
+                    <a className='img-wrap' target='_bland' href='/'>
+                        <img className='img' src={banner2} alt='banner' />
+                    </a>
+                    <a className='img-wrap' target='_bland' href='/'>
+                        <img className='img' src={banner3} alt='banner' />
+                    </a>
+                    <a className='img-wrap' target='_bland' href='/'>
+                        <img className='img' src={banner4} alt='banner' />
+                    </a>
+                </div>
+            </div>
         </article>
     )
 }

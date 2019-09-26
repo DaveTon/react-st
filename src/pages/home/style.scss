@@ -97,4 +97,14 @@
 
 .aside-list{
     flex: 1;
+
+    .img-wrap{
+        width: 280px;
+        height: 100%;
+
+        .img{
+            height: inherit;
+            width: inherit;
+        }
+    }
 }
