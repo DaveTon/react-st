@@ -2,12 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './style.scss';
+import * as actions from './store/actions';
 
 import Logo from './../../resource/imgs/header/logo.png';
 import head from './../../resource/imgs/header/head-test.jpg';
 import assets from './../../resource/imgs/header/assets.png';
 
-const Header = () => {
+const Header = (props) => {
+    const { focused, handelFocused, handelBlur } = props;
     return(
         <header className='eu-header'>
             <div className='wrap'>
@@ -145,7 +147,11 @@ const Header = () => {
                         </div>
                     </Link>
 
-                    <div className='eu-search'>
+                    <div 
+                        className={ focused ? 'eu-search active' : 'eu-search'}
+                        onFocus={handelFocused}
+                        onBlur={handelBlur}
+                    >
                         <div className='eu-wrap'>
                             <input className='eu-input' placeholder='请输入内容' />
                             <button className='eu-button normal circle'>
@@ -220,12 +226,20 @@ const Header = () => {
     )
 }
 
-const mapToState = (state) => {
-    
-}
+const mapToState = (state) => ({
+    focused: state.focused
+});
 
-// const mapToDispatch = (dispatch) => {
+const mapToDispatch = (dispatch) => ({
+    handelFocused(focused){
+        console.log('focus');
+        dispatch(actions.changeFocused(focused))
+    },
 
-// }
+    handelBlur(focused){
+        console.log('blur');
+        dispatch(actions.changeBlur(focused))
+    }
+});
 
-export default connect(mapToState, null)(Header);
+export default connect(mapToState, mapToDispatch)(Header);
