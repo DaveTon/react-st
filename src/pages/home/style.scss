@@ -5,8 +5,27 @@
 .note-list{
     flex: 2;
 
-    .node-item{
+    .note-item{
+        padding: 4px 0 20px 0;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        flex-flow: row-reverse;
+    }
 
+    .row-img{
+        width: 150px;
+        height: 100%;
+
+        .img{
+            height: inherit;
+            width: inherit;
+            border-radius: 5px;
+        }
+    }
+
+    .row-list:not(:only-child){
+        padding-right: 18px;
     }
 
     .title{
@@ -16,12 +35,19 @@
         font-weight: 700;
         line-height: 1.5;
         margin-bottom: 8px;
+        display: inline-block;
+        text-decoration: none;
+
+        &:hover{
+            text-decoration: underline;
+        }
     }
 
     .abstract{
         margin: 0 0 8px;
         font-size: 13px;
         line-height: 24px;
+        font-weight: 400;
         color: #999;
     }
 
@@ -40,16 +66,25 @@
             color: #b4b4b4;
 
             &.diamond{
-                color: #ea6f5a;
-                cursor: none;
-                
+                color: #ea6f5a; 
+                cursor: default;
+                display: inline;
+
                 .icon{
                     font-size: 10px;
                 }
             }
 
+            &.label{
+
+                &:hover{
+                    color: #666;
+                }
+            }
+
             &.like{
-                cursor: none;
+                cursor: default;
+                display: inline;
             }
         }
 
