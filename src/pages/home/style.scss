@@ -98,6 +98,26 @@
 .aside-list{
     flex: 1;
 
+    .wrap{
+        margin-left: 30px;
+        padding: 4px 0;
+    }
+
+    .board{
+        margin-bottom: 20px;
+    }
+
+    .authors{
+        margin: 20px 0;
+        padding: 4px 0;
+
+        .header{
+            margin: 12px 0 4px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
     .img-wrap{
         width: 280px;
         height: 100%;
@@ -105,6 +125,71 @@
         .img{
             height: inherit;
             width: inherit;
+        }
+    }
+
+    .eu-button.title{
+        font-size: 14px;
+        color: #666;
+        font-weight: 600;
+    }
+    
+    .eu-button.refresh{
+        color: #666;
+    
+        .icon{
+            font-size: 12px;
+            margin-right: 8px;
+        }
+    }
+    
+    .eu-button.img{
+        height: 48px;
+        width: 48px;
+        overflow: hidden;
+        border-radius: 24px;
+    
+        .img{
+            height: inherit;
+            width: inherit;
+        }
+    }
+}
+
+.author-list{
+    padding: 4px 0;
+
+    .item{
+        margin: 8px 0;
+        padding: 4px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .follow{
+        margin: 4px auto 4px 8px;
+    }
+}
+
+.side-tool{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+
+    .eu-button{
+        color: #999;
+        height: 40px;
+        width: 40px;
+        border: 1px solid #999;
+        background-color: #fff;
+        opacity: .4;
+
+        &:hover{
+            opacity: .8;
+        }
+
+        .icon{
+            transform: rotate(-90deg);
         }
     }
 }
