@@ -28,6 +28,10 @@ export default (state = defaultState, action) => {
             newState.mouseIn = true;
             return newState;
 
+        case constants.MOUSE_LEAVE:
+            newState.mouseIn = false;
+            return newState;
+            
         default:
             return newState;
     }

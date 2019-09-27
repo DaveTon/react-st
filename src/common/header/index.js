@@ -11,11 +11,12 @@ import assets from './../../resource/imgs/header/assets.png';
 class Header extends React.Component{
 
     getListArea(){
-        const { focused, mouseIn, searchData, historyData, handelMouseEnter } = this.props;
+        const { focused, mouseIn, searchData, historyData, handelMouseEnter, handelMouseLeave } = this.props;
         if(focused || mouseIn){
             return(
                 <div className='eu-list'
                     onMouseEnter={handelMouseEnter}
+                    onMouseLeave={handelMouseLeave}
                 >
                     <div className='hot-search'>
                         <div className='header-group'>
@@ -242,6 +243,10 @@ const mapToDispatch = (dispatch) => ({
 
     handelMouseEnter(){
         dispatch(actions.mouseEnter());
+    },
+
+    handelMouseLeave(){
+        dispatch(actions.mouseLeave());
     }
 });
 
