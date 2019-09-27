@@ -158,66 +158,8 @@ const Header = (props) => {
                                 <i className="icon search"></i>
                             </button>
                         </div>
-                        <div className='eu-list'>
-                            <div className='hot-search'>
-                                <div className='header-group'>
-                                    <h3 className='title'>热门搜索</h3>
-                                    <button className='eu-button normal'>
-                                        <i className="icon switch"></i>
-                                        <span className='label'>换一批</span>
-                                    </button>
-                                </div>
-                                <div className='search-tag'>
-                                    <button className='eu-button small'>
-                                        <span className='label'>微信</span>
-                                    </button>
-                                    <button className='eu-button small'>
-                                        <span className='label'>支付宝</span>
-                                    </button>
-                                    <button className='eu-button small'>
-                                        <span className='label'>蚂蚁金服</span>
-                                    </button>
-                                    <button className='eu-button small'>
-                                        <span className='label'>Python</span>
-                                    </button>
-                                    <button className='eu-button small'>
-                                        <span className='label'>营销QQ</span>
-                                    </button>
-                                    <button className='eu-button small'>
-                                        <span className='label'>企业QQ</span>
-                                    </button>
-                                    <button className='eu-button small'>
-                                        <span className='label'>秋分</span>
-                                    </button>
-                                    <button className='eu-button small'>
-                                        <span className='label'>容联七陌</span>
-                                    </button>
-                                    <button className='eu-button small'>
-                                        <span className='label'>良心云</span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div className='search-history'>
-                                <div className='history-tag'>
-                                    <button className='eu-button icon close'>
-                                        <i className="icon clock"></i>
-                                        <span className='label'>前端</span>
-                                    </button>
-                                    <button className='eu-button icon close'>
-                                        <i className="icon clock"></i>
-                                        <span className='label'>微信</span>
-                                    </button>
-                                    <button className='eu-button icon close'>
-                                        <i className="icon clock"></i>
-                                        <span className='label'>设计</span>
-                                    </button>
-                                    <button className='eu-button icon close'>
-                                        <i className="icon clock"></i>
-                                        <span className='label'>Python</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                        {getListArea(focused)}
+
                     </div>
                 </section>
                 
@@ -225,6 +167,75 @@ const Header = (props) => {
         </header>
     )
 }
+
+const getListArea = (focused) => {
+    if(focused === true){
+        return(
+            <div className='eu-list'>
+                <div className='hot-search'>
+                    <div className='header-group'>
+                        <h3 className='title'>热门搜索</h3>
+                        <button className='eu-button normal'>
+                            <i className="icon switch"></i>
+                            <span className='label'>换一批</span>
+                        </button>
+                    </div>
+                    <div className='search-tag'>
+                        <button className='eu-button small'>
+                            <span className='label'>微信</span>
+                        </button>
+                        <button className='eu-button small'>
+                            <span className='label'>支付宝</span>
+                        </button>
+                        <button className='eu-button small'>
+                            <span className='label'>蚂蚁金服</span>
+                        </button>
+                        <button className='eu-button small'>
+                            <span className='label'>Python</span>
+                        </button>
+                        <button className='eu-button small'>
+                            <span className='label'>营销QQ</span>
+                        </button>
+                        <button className='eu-button small'>
+                            <span className='label'>企业QQ</span>
+                        </button>
+                        <button className='eu-button small'>
+                            <span className='label'>秋分</span>
+                        </button>
+                        <button className='eu-button small'>
+                            <span className='label'>容联七陌</span>
+                        </button>
+                        <button className='eu-button small'>
+                            <span className='label'>良心云</span>
+                        </button>
+                    </div>
+                </div>
+                <div className='search-history'>
+                    <div className='history-tag'>
+                        <button className='eu-button icon close'>
+                            <i className="icon clock"></i>
+                            <span className='label'>前端</span>
+                        </button>
+                        <button className='eu-button icon close'>
+                            <i className="icon clock"></i>
+                            <span className='label'>微信</span>
+                        </button>
+                        <button className='eu-button icon close'>
+                            <i className="icon clock"></i>
+                            <span className='label'>设计</span>
+                        </button>
+                        <button className='eu-button icon close'>
+                            <i className="icon clock"></i>
+                            <span className='label'>Python</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        )
+    }else{
+        return null;
+    }
+};
 
 const mapToState = (state) => ({
     // 注意：使用 combineReducers 拆分之后需要加上该数据所属的state模块
