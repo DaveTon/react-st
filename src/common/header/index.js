@@ -158,8 +158,8 @@ const Header = (props) => {
                                 <i className="icon search"></i>
                             </button>
                         </div>
+                        
                         {getListArea(focused)}
-
                     </div>
                 </section>
                 
