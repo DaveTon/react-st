@@ -244,7 +244,8 @@ const mapToState = (state) => ({
 
 const mapToDispatch = (dispatch) => ({
     handelFocused(){
-        dispatch(actions.changeFocused())
+        dispatch(actions.getListData());
+        dispatch(actions.changeFocused());
     },
 
     handelBlur(){
