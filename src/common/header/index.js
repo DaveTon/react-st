@@ -59,7 +59,7 @@ class Header extends React.Component{
     };
 
     render(){
-        const { focused, handelFocused, handelBlur } = this.props;
+        const { focused, searchData, handelFocused, handelBlur } = this.props;
         return(
             <header className='eu-header'>
                 <div className='wrap'>
@@ -199,7 +199,7 @@ class Header extends React.Component{
 
                         <div 
                             className={ focused ? 'eu-search active' : 'eu-search'}
-                            onFocus={handelFocused}
+                            onFocus={() => handelFocused(searchData)}
                             onBlur={handelBlur}
                         >
                             <div className='eu-wrap'>
@@ -435,8 +435,11 @@ const mapToState = (state) => ({
 });
 
 const mapToDispatch = (dispatch) => ({
-    handelFocused(){
-        dispatch(actions.getListData());
+    handelFocused(searchData){
+        console.log(searchData)
+        if(searchData.length === 0){
+            dispatch(actions.getListData());
+        }
         dispatch(actions.changeFocused());
     },
 
