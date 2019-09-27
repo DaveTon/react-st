@@ -2,6 +2,7 @@ import * as constants from './constants';
 
 const defaultState = {
     focused: false,
+    mouseIn: false,
     searchData: [],
     historyData: []
 }
@@ -21,6 +22,10 @@ export default (state = defaultState, action) => {
             // console.log(action)
             newState.searchData = action.data.searchData;
             newState.historyData = action.data.historyData;
+            return newState;
+
+        case constants.MOUSE_ENTER:
+            newState.mouseIn = true;
             return newState;
 
         default:

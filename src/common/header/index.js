@@ -9,7 +9,7 @@ import head from './../../resource/imgs/header/head-test.jpg';
 import assets from './../../resource/imgs/header/assets.png';
 
 const Header = (props) => {
-    const { focused, searchData, historyData, handelFocused, handelBlur } = props;
+    const { focused, searchData, historyData, mouseIn, handelFocused, handelBlur, handelMouseEnter } = props;
     return(
         <header className='eu-header'>
             <div className='wrap'>
@@ -159,7 +159,7 @@ const Header = (props) => {
                             </button>
                         </div>
                         
-                        {getListArea(focused, searchData, historyData)}
+                        {getListArea(focused, searchData, historyData, mouseIn, handelMouseEnter)}
                     </div>
                 </section>
                 
@@ -168,10 +168,12 @@ const Header = (props) => {
     )
 }
 
-const getListArea = (focused, searchData, historyData) => {
+const getListArea = (focused, searchData, historyData, mouseIn, handelMouseEnter) => {
     if(focused === true){
         return(
-            <div className='eu-list'>
+            <div className='eu-list'
+                onMouseEnter={handelMouseEnter}
+            >
                 <div className='hot-search'>
                     <div className='header-group'>
                         <h3 className='title'>热门搜索</h3>
@@ -216,6 +218,7 @@ const getListArea = (focused, searchData, historyData) => {
 const mapToState = (state) => ({
     // 注意：使用 combineReducers 拆分之后需要加上该数据所属的state模块
     focused: state.header.focused,
+    mouseIn: state.header.mouseIn,
     searchData: state.header.searchData,
     historyData: state.header.historyData
 });
@@ -227,7 +230,11 @@ const mapToDispatch = (dispatch) => ({
     },
 
     handelBlur(){
-        dispatch(actions.changeBlur())
+        dispatch(actions.changeBlur());
+    },
+
+    handelMouseEnter(){
+        dispatch(actions.mouseEnter());
     }
 });
 

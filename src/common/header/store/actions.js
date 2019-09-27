@@ -27,3 +27,6 @@ export const changeBlur = () => ({
     type: constants.CHANGE_BLUR
 });
 
+export const mouseEnter = () => ({
+    type: constants.MOUSE_ENTER
+});
