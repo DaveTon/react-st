@@ -5,25 +5,15 @@ const defaultState = {
 }
 
 export default (state = defaultState, action) => {
-    // const newState = JSON.parse(JSON.stringify(state));
-    // switch(action.type){
-    //     case constants.CHANGE_FOCUSED:
-    //         return newState.focused = action.focused;
-    //     case constants.CHANGE_BLUR:
-    //         return newState.focused = action.focused;
-    //     default:
-    //         return state;
-    // }
-
-    if(action.type === constants.CHANGE_FOCUSED){
-        return{
-            focused: true
-        }
+    const newState = JSON.parse(JSON.stringify(state));
+    switch(action.type){
+        case constants.CHANGE_FOCUSED:
+            newState.focused = true;
+            return newState;
+        case constants.CHANGE_BLUR:
+            newState.focused = false;
+            return newState;
+        default:
+            return newState;
     }
-    if(action.type === constants.CHANGE_BLUR){
-        return{
-            focused: false
-        }
-    }
-    return state;
 }

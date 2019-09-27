@@ -233,12 +233,10 @@ const mapToState = (state) => ({
 
 const mapToDispatch = (dispatch) => ({
     handelFocused(){
-        console.log('focus');
         dispatch(actions.changeFocused())
     },
 
     handelBlur(){
-        console.log('blur');
         dispatch(actions.changeBlur())
     }
 });
