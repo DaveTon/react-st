@@ -227,18 +227,19 @@ const Header = (props) => {
 }
 
 const mapToState = (state) => ({
-    focused: state.focused
+    // 注意：使用 combineReducers 拆分之后需要加上该数据所属的state模块
+    focused: state.header.focused
 });
 
 const mapToDispatch = (dispatch) => ({
-    handelFocused(focused){
+    handelFocused(){
         console.log('focus');
-        dispatch(actions.changeFocused(focused))
+        dispatch(actions.changeFocused())
     },
 
-    handelBlur(focused){
+    handelBlur(){
         console.log('blur');
-        dispatch(actions.changeBlur(focused))
+        dispatch(actions.changeBlur())
     }
 });
 
