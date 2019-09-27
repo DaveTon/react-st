@@ -9,7 +9,7 @@ import head from './../../resource/imgs/header/head-test.jpg';
 import assets from './../../resource/imgs/header/assets.png';
 
 const Header = (props) => {
-    const { focused, handelFocused, handelBlur } = props;
+    const { focused, searchData, historyData, handelFocused, handelBlur } = props;
     return(
         <header className='eu-header'>
             <div className='wrap'>
@@ -159,7 +159,7 @@ const Header = (props) => {
                             </button>
                         </div>
                         
-                        {getListArea(focused)}
+                        {getListArea(focused, searchData, historyData)}
                     </div>
                 </section>
                 
@@ -168,7 +168,7 @@ const Header = (props) => {
     )
 }
 
-const getListArea = (focused) => {
+const getListArea = (focused, searchData, historyData) => {
     if(focused === true){
         return(
             <div className='eu-list'>
@@ -181,53 +181,29 @@ const getListArea = (focused) => {
                         </button>
                     </div>
                     <div className='search-tag'>
-                        <button className='eu-button small'>
-                            <span className='label'>微信</span>
-                        </button>
-                        <button className='eu-button small'>
-                            <span className='label'>支付宝</span>
-                        </button>
-                        <button className='eu-button small'>
-                            <span className='label'>蚂蚁金服</span>
-                        </button>
-                        <button className='eu-button small'>
-                            <span className='label'>Python</span>
-                        </button>
-                        <button className='eu-button small'>
-                            <span className='label'>营销QQ</span>
-                        </button>
-                        <button className='eu-button small'>
-                            <span className='label'>企业QQ</span>
-                        </button>
-                        <button className='eu-button small'>
-                            <span className='label'>秋分</span>
-                        </button>
-                        <button className='eu-button small'>
-                            <span className='label'>容联七陌</span>
-                        </button>
-                        <button className='eu-button small'>
-                            <span className='label'>良心云</span>
-                        </button>
+                        {
+                            searchData.map((item) => {
+                                return(
+                                    <button className='eu-button small' key={item}>
+                                        <span className='label'>{item}</span>
+                                    </button>
+                                )
+                            })
+                        }
                     </div>
                 </div>
                 <div className='search-history'>
                     <div className='history-tag'>
-                        <button className='eu-button icon close'>
-                            <i className="icon clock"></i>
-                            <span className='label'>前端</span>
-                        </button>
-                        <button className='eu-button icon close'>
-                            <i className="icon clock"></i>
-                            <span className='label'>微信</span>
-                        </button>
-                        <button className='eu-button icon close'>
-                            <i className="icon clock"></i>
-                            <span className='label'>设计</span>
-                        </button>
-                        <button className='eu-button icon close'>
-                            <i className="icon clock"></i>
-                            <span className='label'>Python</span>
-                        </button>
+                        {
+                            historyData.map((item) => {
+                                return(
+                                    <button className='eu-button icon close' key={item}>
+                                        <i className="icon clock"></i>
+                                        <span className='label'>{item}</span>
+                                    </button>
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </div>
@@ -239,7 +215,9 @@ const getListArea = (focused) => {
 
 const mapToState = (state) => ({
     // 注意：使用 combineReducers 拆分之后需要加上该数据所属的state模块
-    focused: state.header.focused
+    focused: state.header.focused,
+    searchData: state.header.searchData,
+    historyData: state.header.historyData
 });
 
 const mapToDispatch = (dispatch) => ({

@@ -2,7 +2,8 @@ import * as constants from './constants';
 
 const defaultState = {
     focused: false,
-    list: []
+    searchData: [],
+    historyData: []
 }
 
 export default (state = defaultState, action) => {
@@ -17,7 +18,9 @@ export default (state = defaultState, action) => {
             return newState;
 
         case constants.CHANGE_DATA:
-            newState.list = action.data;
+            // console.log(action)
+            newState.searchData = action.data.searchData;
+            newState.historyData = action.data.historyData;
             return newState;
 
         default:

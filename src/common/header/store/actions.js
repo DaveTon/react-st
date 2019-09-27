@@ -15,6 +15,7 @@ export const getListData = () => {
     return (dispatch) => {
         axios.get('/api/searchList.json').then((res) => {
             const data = res.data;
+            // console.log(data);
             dispatch(changeData(data.data));
         }).catch(() => {
             console.log('error')
