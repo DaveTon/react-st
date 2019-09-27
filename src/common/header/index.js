@@ -11,8 +11,8 @@ import assets from './../../resource/imgs/header/assets.png';
 class Header extends React.Component{
 
     getListArea(){
-        const { focused, searchData, historyData, handelMouseEnter } = this.props;
-        if(focused){
+        const { focused, mouseIn, searchData, historyData, handelMouseEnter } = this.props;
+        if(focused || mouseIn){
             return(
                 <div className='eu-list'
                     onMouseEnter={handelMouseEnter}
