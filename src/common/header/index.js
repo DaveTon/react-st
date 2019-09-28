@@ -156,7 +156,7 @@ class Header extends React.Component{
                             <div className='eu-dropdown'>
                                 <button className='eu-button nav massage'>
                                     <i className="icon comments"></i>
-                                    <span className='label'>评论</span>
+                                    <span className='label'>消息</span>
                                 </button>
                                 <div className='drop-list'>
                                     <button className='eu-button normal list'>
@@ -236,15 +236,12 @@ const mapToDispatch = (dispatch) => ({
         }
         dispatch(actions.changeFocused());
     },
-
     handelBlur(){
         dispatch(actions.changeBlur());
     },
-
     handelMouseEnter(){
         dispatch(actions.mouseEnter());
     },
-
     handelMouseLeave(){
         dispatch(actions.mouseLeave());
     }
