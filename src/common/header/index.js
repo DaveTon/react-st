@@ -225,7 +225,8 @@ const mapToState = (state) => ({
     focused: state.header.focused,
     mouseIn: state.header.mouseIn,
     searchData: state.header.searchData,
-    historyData: state.header.historyData
+    historyData: state.header.historyData,
+    page: state.header.page
 });
 
 const mapToDispatch = (dispatch) => ({

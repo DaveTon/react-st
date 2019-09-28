@@ -4,7 +4,9 @@ const defaultState = {
     focused: false,
     mouseIn: false,
     searchData: [],
-    historyData: []
+    historyData: [],
+    totalPage: 1,
+    page: 1
 }
 
 export default (state = defaultState, action) => {
@@ -22,6 +24,7 @@ export default (state = defaultState, action) => {
             // console.log(action)
             newState.searchData = action.data.searchData;
             newState.historyData = action.data.historyData;
+            newState.totalPage = action.totalPage;
             return newState;
 
         case constants.MOUSE_ENTER:
