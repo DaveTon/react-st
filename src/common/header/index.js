@@ -53,7 +53,7 @@ class Header extends React.Component{
                             <button className='eu-button normal'
                                 onClick={() => handelSwitch(page, totalPage, this.spinIcon)}
                             >
-                                <i ref={(icon) => {this.spinIcon = icon}} className="icon switch"></i>
+                                <i ref={(icon) => {this.spinIcon = icon}} className="icon refresh"></i>
                                 <span className='label'>换一批</span>
                             </button>
                         </div>
