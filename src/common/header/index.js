@@ -13,16 +13,28 @@ class Header extends React.Component{
     getListArea(){
         const { focused, mouseIn, searchData, page, historyData, handelMouseEnter, handelMouseLeave } = this.props;
 
-        const getList = [];
+        const getSearchList = [];
+        const getHistoryList = [];
         if(searchData.length){
             for(let i = (page - 1) * 9; i < page * 9; i++){
                 if(i < searchData.length){
-                    getList.push(
+                    getSearchList.push(
                         <button className='eu-button small' key={searchData[i]}>
                             <span className='label'>{searchData[i]}</span>
                         </button>
                     );
                 }
+            }
+        }
+
+        if(historyData.length){
+            for(let i = 0; i < 4; i++){
+                getHistoryList.push(
+                    <button className='eu-button icon close' key={historyData[i]}>
+                        <i className="icon clock"></i>
+                        <span className='label'>{historyData[i]}</span>
+                    </button>
+                );
             }
         }
 
@@ -41,20 +53,21 @@ class Header extends React.Component{
                             </button>
                         </div>
                         <div className='search-tag'>
-                            { getList }
+                            { getSearchList }
                         </div>
                     </div>
                     <div className='search-history'>
                         <div className='history-tag'>
                             {
-                                historyData.map((item) => {
-                                    return(
-                                        <button className='eu-button icon close' key={item}>
-                                            <i className="icon clock"></i>
-                                            <span className='label'>{item}</span>
-                                        </button>
-                                    )
-                                })
+                                getHistoryList
+                                // historyData.map((item) => {
+                                //     return(
+                                //         <button className='eu-button icon close' key={item}>
+                                //             <i className="icon clock"></i>
+                                //             <span className='label'>{item}</span>
+                                //         </button>
+                                //     )
+                                // })
                             }
                         </div>
                     </div>
