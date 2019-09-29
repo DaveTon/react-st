@@ -41,16 +41,7 @@ class Header extends React.Component{
                             </button>
                         </div>
                         <div className='search-tag'>
-                            {
-                                getList
-                                // searchData.map((item) => {
-                                //     return(
-                                //         <button className='eu-button small' key={item}>
-                                //             <span className='label'>{item}</span>
-                                //         </button>
-                                //     )
-                                // })
-                            }
+                            { getList }
                         </div>
                     </div>
                     <div className='search-history'>
