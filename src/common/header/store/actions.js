@@ -8,7 +8,7 @@ export const changeFocused = () => ({
 const changeData = (data) => ({
     type: constants.CHANGE_DATA,
     data,
-    totalPage: Math.ceil(data.searchData.length / 9)
+    totalPage: Math.ceil(data.searchData.length / 10)
 });
 
 // 发 ajax 请求获取热门搜索中的数据
