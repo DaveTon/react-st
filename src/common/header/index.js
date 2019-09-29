@@ -58,17 +58,7 @@ class Header extends React.Component{
                     </div>
                     <div className='search-history'>
                         <div className='history-tag'>
-                            {
-                                getHistoryList
-                                // historyData.map((item) => {
-                                //     return(
-                                //         <button className='eu-button icon close' key={item}>
-                                //             <i className="icon clock"></i>
-                                //             <span className='label'>{item}</span>
-                                //         </button>
-                                //     )
-                                // })
-                            }
+                            { getHistoryList }
                         </div>
                     </div>
                 </div>
