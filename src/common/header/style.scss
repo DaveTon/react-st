@@ -232,10 +232,14 @@
         color: #777;
         font-size: 12px;
         line-height: 18px;
+        display: flex;
 
         .icon{
             font-size: 12px;
             margin-right: 4px;
+            display: block;
+            transition: all .3s ease-out;
+            transform-origin: center center;
         }
     }
 }

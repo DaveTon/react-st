@@ -51,9 +51,9 @@ class Header extends React.Component{
                         <div className='header-group'>
                             <h3 className='title'>热门搜索</h3>
                             <button className='eu-button normal'
-                                onClick={() => handelSwitch(page, totalPage)}
+                                onClick={() => handelSwitch(page, totalPage, this.spinIcon)}
                             >
-                                <i className="icon switch"></i>
+                                <i ref={(icon) => {this.spinIcon = icon}} className="icon switch"></i>
                                 <span className='label'>换一批</span>
                             </button>
                         </div>
@@ -260,8 +260,15 @@ const mapToDispatch = (dispatch) => ({
     handelMouseLeave(){
         dispatch(actions.mouseLeave());
     },
-    handelSwitch(page, totalPage){
-        console.log(page, totalPage);
+    handelSwitch(page, totalPage, spin){
+        let orginAngle = spin.style.transform.replace(/[^0-9]/ig, '');
+        if(orginAngle){
+            orginAngle = parseInt(orginAngle, 10);
+        }else{
+            orginAngle = 0;
+        }
+        spin.style.transform = 'rotate(' + (orginAngle + 360) + 'deg)';
+        // console.log(orginAngle);
         if(page < totalPage){
             dispatch(actions.switchPage(page + 1));
         }else{
