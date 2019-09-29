@@ -21,7 +21,6 @@ export default (state = defaultState, action) => {
             return newState;
 
         case constants.CHANGE_DATA:
-            // console.log(action)
             newState.searchData = action.data.searchData;
             newState.historyData = action.data.historyData;
             newState.totalPage = action.totalPage;

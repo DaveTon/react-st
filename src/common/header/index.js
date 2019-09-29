@@ -11,7 +11,21 @@ import assets from './../../resource/imgs/header/assets.png';
 class Header extends React.Component{
 
     getListArea(){
-        const { focused, mouseIn, searchData, historyData, handelMouseEnter, handelMouseLeave } = this.props;
+        const { focused, mouseIn, searchData, page, historyData, handelMouseEnter, handelMouseLeave } = this.props;
+
+        const getList = [];
+        if(searchData.length){
+            for(let i = (page - 1) * 9; i < page * 9; i++){
+                if(i < searchData.length){
+                    getList.push(
+                        <button className='eu-button small' key={searchData[i]}>
+                            <span className='label'>{searchData[i]}</span>
+                        </button>
+                    );
+                }
+            }
+        }
+
         if(focused || mouseIn){
             return(
                 <div className='eu-list'
@@ -28,13 +42,14 @@ class Header extends React.Component{
                         </div>
                         <div className='search-tag'>
                             {
-                                searchData.map((item) => {
-                                    return(
-                                        <button className='eu-button small' key={item}>
-                                            <span className='label'>{item}</span>
-                                        </button>
-                                    )
-                                })
+                                getList
+                                // searchData.map((item) => {
+                                //     return(
+                                //         <button className='eu-button small' key={item}>
+                                //             <span className='label'>{item}</span>
+                                //         </button>
+                                //     )
+                                // })
                             }
                         </div>
                     </div>
@@ -231,7 +246,6 @@ const mapToState = (state) => ({
 
 const mapToDispatch = (dispatch) => ({
     handelFocused(searchData){
-        console.log(searchData)
         if(searchData.length === 0){
             dispatch(actions.getListData());
         }
