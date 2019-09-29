@@ -34,3 +34,8 @@ export const mouseEnter = () => ({
 export const mouseLeave = () => ({
     type: constants.MOUSE_LEAVE
 });
+
+export const switchPage = (page) => ({
+    type: constants.SWITCH_PAGE,
+    page
+});

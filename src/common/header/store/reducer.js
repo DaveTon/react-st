@@ -33,6 +33,10 @@ export default (state = defaultState, action) => {
         case constants.MOUSE_LEAVE:
             newState.mouseIn = false;
             return newState;
+
+        case constants.SWITCH_PAGE:
+            newState.page = action.page;
+            return newState;
             
         default:
             return newState;

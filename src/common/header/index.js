@@ -11,12 +11,15 @@ import assets from './../../resource/imgs/header/assets.png';
 class Header extends React.Component{
 
     getListArea(){
-        const { focused, mouseIn, searchData, page, historyData, handelMouseEnter, handelMouseLeave } = this.props;
+        const { 
+            focused, mouseIn, searchData, page, totalPage, historyData, 
+            handelMouseEnter, handelMouseLeave, handelSwitch 
+        } = this.props;
 
         const getSearchList = [];
         const getHistoryList = [];
         if(searchData.length){
-            for(let i = (page - 1) * 9; i < page * 9; i++){
+            for(let i = (page - 1) * 10; i < page * 10; i++){
                 if(i < searchData.length){
                     getSearchList.push(
                         <button className='eu-button small' key={searchData[i]}>
@@ -36,7 +39,7 @@ class Header extends React.Component{
                     </button>
                 );
             }
-        }
+        };
 
         if(focused || mouseIn){
             return(
@@ -47,7 +50,9 @@ class Header extends React.Component{
                     <div className='hot-search'>
                         <div className='header-group'>
                             <h3 className='title'>热门搜索</h3>
-                            <button className='eu-button normal'>
+                            <button className='eu-button normal'
+                                onClick={() => handelSwitch(page, totalPage)}
+                            >
                                 <i className="icon switch"></i>
                                 <span className='label'>换一批</span>
                             </button>
@@ -235,7 +240,8 @@ const mapToState = (state) => ({
     mouseIn: state.header.mouseIn,
     searchData: state.header.searchData,
     historyData: state.header.historyData,
-    page: state.header.page
+    page: state.header.page,
+    totalPage: state.header.totalPage
 });
 
 const mapToDispatch = (dispatch) => ({
@@ -253,6 +259,14 @@ const mapToDispatch = (dispatch) => ({
     },
     handelMouseLeave(){
         dispatch(actions.mouseLeave());
+    },
+    handelSwitch(page, totalPage){
+        console.log(page, totalPage);
+        if(page < totalPage){
+            dispatch(actions.switchPage(page + 1));
+        }else{
+            dispatch(actions.switchPage(1));
+        }
     }
 });
 
