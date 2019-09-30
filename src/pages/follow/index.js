@@ -6,7 +6,13 @@ const Follow = () => {
     return(
         <article className='container'>
             <aside className='aside'>
+                <div className='aside-header'>
 
+                </div>
+
+                <ul className='aside-list'>
+                    <li className='item'></li>
+                </ul>
             </aside>
 
             <main className='main'>
