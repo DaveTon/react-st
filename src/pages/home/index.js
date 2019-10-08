@@ -31,7 +31,7 @@ class Home extends React.Component{
                 <div className='note-list'>
                     <ul className='list-wrap'>
                         {
-                            topicList.map((item, index) => {
+                            topicList.map((item) => {
                                 return(
                                     <li className='note-item'
                                         key={item.id}
