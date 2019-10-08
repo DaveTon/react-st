@@ -13,7 +13,7 @@ export const getHomeDataInfo = () => {
             url: './api/mainList.json'
         }).then((res) => {
             const data = res.data.data;
-            console.log(data.topicList[0].title)
+            // console.log(data.topicList[0].title)
             dispatch(changeHomeData(data.topicList));
         }).catch(() => {
             console.log('error')

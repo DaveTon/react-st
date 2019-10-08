@@ -4,8 +4,8 @@ import * as actions from './store/actions';
 
 import './style.scss';
 
-import test1 from '../../resource/imgs/home/test1.jpg';
-import test2 from '../../resource/imgs/home/test2.jpg';
+// import test1 from '../../resource/imgs/home/test1.jpg';
+// import test2 from '../../resource/imgs/home/test2.jpg';
 import banner1 from '../../resource/imgs/home/banner-s1.png';
 import banner2 from '../../resource/imgs/home/banner-s2.png';
 import banner3 from '../../resource/imgs/home/banner-s3.png';
@@ -17,7 +17,9 @@ class Home extends React.Component{
     componentDidMount(){
         this.props.changeHomeData();
     }
+
     render(){
+        const { topicList } = this.props;
         return(
             <article className='container'>
                 <div className='side-tool'>
@@ -28,7 +30,40 @@ class Home extends React.Component{
     
                 <div className='note-list'>
                     <ul className='list-wrap'>
-                        <li className='note-item'>
+                        {
+                            topicList.map((item, index) => {
+                                return(
+                                    <li className='note-item'
+                                        key={index}
+                                    >
+                                        <a className='row-img' target='_blank' href='/'>
+                                            <img className='img' src={item.imgUrl} alt='test' />
+                                        </a>
+                                        <div className='row-list'>
+                                            <a target='_blank' href='/'>
+                                                <h2 className='title'>{item.title}</h2>
+                                            </a>
+                                            <p className='abstract'>{item.abstract}</p>
+                                            <div className='meta'>
+                                                <button className='eu-button diamond'>
+                                                    <i className="icon diamond"></i>
+                                                    <span className='label'>{item.paid}</span>
+                                                </button>
+                                                <button className='eu-button label'>
+                                                    <span className='label'>{item.userName}</span>
+                                                </button>
+                                                <button className='eu-button like'>
+                                                    <i className="icon like"></i>
+                                                    <span className='label'>11676</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                )
+                            })
+                        }
+
+                        {/* <li className='note-item'>
                             <div className='row-list'>
                                 <a target='_blank' href='/'><h2 className='title'>
                                     公告：关于暂停用户发布功能，并全面清查平台内容    
@@ -104,7 +139,7 @@ class Home extends React.Component{
                                     </button>
                                 </div>
                             </div>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
                 
