@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import './style.scss';
 
@@ -12,6 +13,9 @@ import head1 from '../../resource/imgs/home/head1.jpg';
 import head2 from '../../resource/imgs/home/head2.jpg';
 
 class Home extends React.Component{
+    componentDidMount(){
+        this.props.changeHomeData();
+    }
     render(){
         return(
             <article className='container'>
@@ -176,4 +180,14 @@ class Home extends React.Component{
     }
 }
 
-export default Home;
+const mapToState = (state) => ({
+
+});
+
+const mapToDispatch = (dispatch) => ({
+    changeHomeData(){
+        
+    }
+});
+
+export default connect(mapToState, mapToDispatch)(Home);
