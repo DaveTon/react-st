@@ -1,14 +1,16 @@
-// import * as constants from './constants';
+import * as constants from './constants';
 
 const defaultState = {
-    list: ['Dave']
+    topicList: []
 }
 
 export default (state = defaultState, action) => {
+    const newState = JSON.parse(JSON.stringify(state));
     switch(action.type){
-        // case constants.ADD_LIST_ITEM:
-        //     return addListItem(state, action)
+        case constants.CHANGE_HOME_DATA:
+            newState.topicList.push(action.data);
+            return newState;
         default:
-            return state;
+            return newState;
     }
 }
