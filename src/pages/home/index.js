@@ -34,7 +34,7 @@ class Home extends React.Component{
                             topicList.map((item, index) => {
                                 return(
                                     <li className='note-item'
-                                        key={index}
+                                        key={item.id}
                                     >
                                         <a className='row-img' target='_blank' href='/'>
                                             <img className='img' src={item.imgUrl} alt='test' />
