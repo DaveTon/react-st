@@ -8,9 +8,13 @@ const changeHomeData = (data) => ({
 
 export const getHomeDataInfo = () => {
     return (dispatch) => {
-        axios.get('./api/mainList.json').then((res) => {
+        axios({
+            method: 'get',
+            url: './api/mainList.json',
+            responseType: 'stream'
+        }).then((res) => {
             const data = res.data.data;
-            // console.log(data.topicList)
+            console.log(data.topicList[0].title)
             dispatch(changeHomeData(data.topicList));
         }).catch(() => {
             console.log('error')
