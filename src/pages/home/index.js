@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import * as actions from './store/actions';
 
 import './style.scss';
 
@@ -181,12 +182,12 @@ class Home extends React.Component{
 }
 
 const mapToState = (state) => ({
-
+    topicList: state.home.topicList
 });
 
 const mapToDispatch = (dispatch) => ({
     changeHomeData(){
-        
+        dispatch(actions.getHomeDataInfo());
     }
 });
 
