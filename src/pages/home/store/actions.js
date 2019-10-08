@@ -10,8 +10,7 @@ export const getHomeDataInfo = () => {
     return (dispatch) => {
         axios({
             method: 'get',
-            url: './api/mainList.json',
-            responseType: 'stream'
+            url: './api/mainList.json'
         }).then((res) => {
             const data = res.data.data;
             console.log(data.topicList[0].title)
