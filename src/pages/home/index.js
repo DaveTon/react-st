@@ -54,7 +54,7 @@ class Home extends React.Component{
                                                 </button>
                                                 <button className='eu-button like'>
                                                     <i className="icon like"></i>
-                                                    <span className='label'>11676</span>
+                                                    <span className='label'>{item.like}</span>
                                                 </button>
                                             </div>
                                         </div>
