@@ -1,7 +1,8 @@
 import * as constants from './constants';
 
 const defaultState = {
-    topicList: []
+    topicList: [],
+    authorList: []
 }
 
 export default (state = defaultState, action) => {
@@ -10,6 +11,9 @@ export default (state = defaultState, action) => {
         case constants.CHANGE_HOME_DATA:
             // newState.topicList.push(action.data);
             newState.topicList = action.data;
+            return newState;
+        case constants.CHANGE_AUTHOR_LIST_DATA:
+            newState.authorList = action.data;
             return newState;
         default:
             return newState;
