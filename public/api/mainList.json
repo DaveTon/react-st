@@ -5,7 +5,7 @@
             "id": 1,
             "title": "如何更优雅的封装组件 - Search",
             "abstract": "Search - 搜索框无论在B端还是C端都会存在的东西。无疑把其抽离封装📦成则最为合适。能确保组件的易读性/可扩展性/最佳使用性，一直是我不断...",
-            "imgUrl": "//upload-images.jianshu.io/upload_images/5369363-905d3fe25a221b95.png?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240",
+            "imgUrl": "../../resource/imgs/home/test1.jpg",
             "paid": 0.3,
             "userName": "Danile_1226",
             "comments": 0,
