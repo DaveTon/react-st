@@ -19,7 +19,7 @@ class Home extends React.Component{
     }
 
     render(){
-        const { topicList } = this.props;
+        const { handelChangeAuthor, topicList } = this.props;
         return(
             <article className='container'>
                 <div className='side-tool'>
@@ -87,8 +87,11 @@ class Home extends React.Component{
                                 <button className='eu-button title'>
                                     <span className='label'>推荐作者</span>
                                 </button>
-                                <button className='eu-button refresh'>
-                                    <i className="icon refresh"></i>
+                                <button 
+                                    onClick={() => {handelChangeAuthor(this.spinIcon)}}
+                                    className='eu-button refresh'
+                                >
+                                    <i ref={(icon) => {this.spinIcon = icon}} className="icon refresh"></i>
                                     <span className='label'>换一批</span>
                                 </button>
                             </div>
@@ -145,6 +148,16 @@ const mapToState = (state) => ({
 const mapToDispatch = (dispatch) => ({
     changeHomeData(){
         dispatch(actions.getHomeDataInfo());
+    },
+    handelChangeAuthor(spin){
+        let orginAngle = spin.style.transform.replace(/[^0-9]/ig, '');
+        if(orginAngle){
+            orginAngle = parseInt(orginAngle, 10);
+        }else{
+            orginAngle = 0;
+        }
+        spin.style.transform = 'rotate(' + (orginAngle + 360) + 'deg)';
+        console.log(orginAngle);
     }
 });
 
