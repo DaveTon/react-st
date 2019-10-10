@@ -9,7 +9,6 @@ export default (state = defaultState, action) => {
     const newState = JSON.parse(JSON.stringify(state));
     switch(action.type){
         case constants.CHANGE_HOME_DATA:
-            // newState.topicList.push(action.data);
             newState.topicList = action.data;
             return newState;
         case constants.CHANGE_AUTHOR_LIST_DATA:
