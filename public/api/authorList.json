@@ -4,7 +4,7 @@
         "authorList": [{
             "id": 1,
             "userName": "卢璐说",
-            "imgUrl": "../../resource/imgs/home/test1.jpg",
+            "imgUrl": "/src/resource/imgs/home/test1.jpg",
             "article": 1213000,
             "follow": false,
             "like": 269000
