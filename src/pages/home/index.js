@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import * as actions from './store/actions';
 
 import './style.scss';
+import HomeBanner from '../../common/banner';
 
 // import test1 from '../../resource/imgs/home/test1.jpg';
 // import test2 from '../../resource/imgs/home/test2.jpg';
@@ -29,6 +30,8 @@ class Home extends React.Component{
                 </div>
     
                 <div className='note-list'>
+                    <HomeBanner />
+
                     <ul className='list-wrap'>
                         {
                             topicList.map((item) => {
