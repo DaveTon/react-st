@@ -12,7 +12,9 @@ class HomeBanner extends React.Component{
             <div className='home-banner'>
                 <div className='banner-list'>
                     <Link to='/'>
-                        <div className='banner-item'><img className='img' src={HomeBanner1} alt='banner' /></div>
+                        <div className='banner-item'>
+                            <img className='img' src={HomeBanner1} alt='banner' />
+                        </div>
                     </Link>
                 </div>
             </div>
