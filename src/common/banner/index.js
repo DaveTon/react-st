@@ -22,5 +22,4 @@ class HomeBanner extends React.Component{
     }
 }
 
-
 export default connect(null, null)(HomeBanner);
