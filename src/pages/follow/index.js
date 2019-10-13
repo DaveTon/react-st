@@ -7,6 +7,12 @@ const Follow = () => {
         <article className='container'>
             <aside className='aside'>
                 <div className='aside-header'>
+                    <div className='header'>
+                        <button className='eu-button'>
+                            <span className='label'>关注全部</span>
+                            <i className="icon dropdown"></i>
+                        </button>
+                    </div>
 
                 </div>
 
