@@ -12,6 +12,10 @@ const Follow = () => {
                             <span className='label'>关注全部</span>
                             <i className="icon dropdown"></i>
                         </button>
+                        <button className='eu-button add'>
+                            <span className='label'>添加关注</span>
+                            <i className="icon dropdown"></i>
+                        </button>
                     </div>
 
                 </div>

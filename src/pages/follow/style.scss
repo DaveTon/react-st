@@ -8,3 +8,16 @@
     overflow: auto;
     border-right: 1px solid #f0f0f0;
 }
+
+.aside-header{
+    padding-right: 24px;
+    .header{
+        display: flex;
+        justify-content: space-between;
+
+        .eu-button.add{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+    }
+}
