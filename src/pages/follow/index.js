@@ -18,6 +18,9 @@ const Follow = () => {
                         </button>
                     </div>
 
+                    <div className='list'>
+                        
+                    </div>
                 </div>
 
                 <ul className='aside-list'>
