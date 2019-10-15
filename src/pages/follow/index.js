@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './style.scss';
+import head from './../../resource/imgs/header/head-test.jpg';
 
 class Follow extends React.Component{
     render(){
@@ -20,7 +21,41 @@ class Follow extends React.Component{
                         </div>
     
                         <div className='list'>
-                            
+                            <div className='item'>
+                                <button className='eu-button img img-head'>
+                                    <img className='img' src={head} alt='user' />
+                                    <span class="label">WEB前端之路</span>
+                                </button>
+                                <span className='item-label'>95</span>
+                            </div>
+                            <div className='item'>
+                                <button className='eu-button img img-head'>
+                                    <img className='img' src={head} alt='user' />
+                                    <span class="label">WEB前端之路</span>
+                                </button>
+                                <span className='item-label'>95</span>
+                            </div>
+                            <div className='item'>
+                                <button className='eu-button img img-head'>
+                                    <img className='img' src={head} alt='user' />
+                                    <span class="label">WEB前端之路</span>
+                                </button>
+                                <span className='item-label'>95</span>
+                            </div>
+                            <div className='item'>
+                                <button className='eu-button img img-head'>
+                                    <img className='img' src={head} alt='user' />
+                                    <span class="label">WEB前端之路</span>
+                                </button>
+                                <span className='item-label'>95</span>
+                            </div>
+                            <div className='item'>
+                                <button className='eu-button img img-head'>
+                                    <img className='img' src={head} alt='user' />
+                                    <span class="label">WEB前端之路</span>
+                                </button>
+                                <span className='item-label'>95</span>
+                            </div>
                         </div>
                     </div>
     
