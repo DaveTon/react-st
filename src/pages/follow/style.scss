@@ -25,4 +25,36 @@
             flex-direction: row-reverse;
         }
     }
+
+    .list{
+        padding: 2px 0;
+    }
+
+    .item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        border-radius: 5px;
+        padding: 0 2px;
+        margin: 2px 0;
+        cursor: pointer;
+
+        &:hover{
+            background-color: #eee;
+        }
+    }
+
+    .eu-button.img{
+        font-size: 15px;
+        color: #333;
+    }
+
+    .item-label{
+        font-size: 15px;
+        color: #333;
+        font-weight: 400;
+        margin: 2px;
+        padding: 2px;
+    }
 }
