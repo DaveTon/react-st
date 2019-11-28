@@ -6,7 +6,7 @@ import Home from './pages/home';
 import Follow from './pages/follow';
 import News from './pages/news';
 
-export default class Router extends React.Component{
+class Router extends React.Component{
     render(){
         return(
             <div className='eu-container'>
@@ -23,3 +23,5 @@ export default class Router extends React.Component{
         )
     }
 }
+
+export default Router;
