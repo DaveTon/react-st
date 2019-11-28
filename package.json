@@ -1,6 +1,6 @@
 {
   "name": "react-st",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
@@ -38,7 +38,16 @@
     ]
   },
   "main": "index.js",
-  "repository": "https://github.com/DaveTon/react-st.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaveTon/react-st.git"
+  },
   "author": "daveton <dave.zzev@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "bugs": {
+    "url": "https://github.com/DaveTon/react-st/issues"
+  },
+  "homepage": "https://github.com/DaveTon/react-st#readme",
+  "devDependencies": {}
 }
