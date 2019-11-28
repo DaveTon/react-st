@@ -5,14 +5,10 @@ import * as actions from './store/actions';
 import './style.scss';
 import HomeBanner from '../../common/banner';
 
-// import test1 from '../../resource/imgs/home/test1.jpg';
-// import test2 from '../../resource/imgs/home/test2.jpg';
 import banner1 from '../../resource/imgs/home/banner-s1.png';
 import banner2 from '../../resource/imgs/home/banner-s2.png';
 import banner3 from '../../resource/imgs/home/banner-s3.png';
 import banner4 from '../../resource/imgs/home/banner-s4.png';
-// import head1 from '../../resource/imgs/home/head1.jpg';
-// import head2 from '../../resource/imgs/home/head2.jpg';
 
 class Home extends React.Component{
     componentDidMount(){
