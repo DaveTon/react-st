@@ -1,11 +1,20 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-class Todolist extends Comment{
-    render(){
-        return(
-            <div>Hello</div>
-        )
-    }
+const Todolist = (props) => {
+    return (
+        <div>Hello</div>
+    )
 }
 
-export default Todolist;
+const mapState = (state) => ({
+    value: state.todo.value,
+    list: state.todo.list
+})
+
+const mapDispatch = (dispatch) => ({
+
+})
+
+
+export default connect(mapState, mapDispatch)(Todolist);
