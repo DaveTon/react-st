@@ -15,7 +15,7 @@ export const getHomeDataInfo = () => {
     return (dispatch) => {
         axios({
             method: 'get',
-            url: './api/mainList.json'
+            url: '/api/mainList.json'
         }).then((res) => {
             const data = res.data.data;
             // console.log(data.topicList[0].title)
@@ -30,7 +30,7 @@ export const getAuthorListInfo = () => {
     return (dispatch) => {
         axios({
             method: 'get',
-            url: './api/authorList.json'
+            url: '/api/authorList.json'
         }).then((res) => {
             const data = res.data.data;
             // console.log(data.authorList[0].userName)
