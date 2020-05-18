@@ -2,8 +2,18 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const Todolist = (props) => {
+    const { value } = props;
     return (
-        <div>Hello</div>
+        <div>
+            <input 
+                placeholder='请输入'
+                value={value}
+            />
+            <button>提交</button>
+            <ul>
+                <li>item</li>
+            </ul>
+        </div>
     )
 }
 
