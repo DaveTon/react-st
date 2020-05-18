@@ -3,7 +3,10 @@ import { connect } from 'react-redux';
 import * as actions from './store/actions';
 
 const Todolist = (props) => {
-    const { value, list, handelChange, handelClickAdd } = props;
+    const { 
+        value, list, 
+        handelChange, handelClickAdd, handelDeleteItem 
+    } = props;
     return (
         <div>
             <input 
@@ -20,6 +23,7 @@ const Todolist = (props) => {
                         return(
                             <li
                                 key={index}
+                                onClick={handelDeleteItem}
                             >{item}</li>
                         )
                     })
@@ -42,6 +46,10 @@ const mapDispatch = (dispatch) => ({
 
     handelClickAdd(){
         dispatch(actions.addValueList())
+    },
+
+    handelDeleteItem(index){
+        dispatch(actions.deleteItem(index))
     }
 })
 

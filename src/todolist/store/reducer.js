@@ -15,6 +15,11 @@ export default (state = defaultState, action) => {
 
         case constants.ADD_VALUE_LIST:
             newState.list.push(newState.value);
+            newState.value = '';
+            return newState;
+
+        case constants.DELETE_ITEM:
+            newState.list.splice(action.index, 1)
             return newState;
 
         default:

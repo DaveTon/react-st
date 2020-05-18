@@ -8,3 +8,8 @@ export const changeInputValue = (value) => ({
 export const addValueList = () => ({
     type: constants.ADD_VALUE_LIST
 })
+
+export const deleteItem = (index) => ({
+    type: constants.DELETE_ITEM,
+    index
+})
