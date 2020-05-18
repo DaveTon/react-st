@@ -1,0 +1,2 @@
+export const CHANGE_INPUT_VALUE = 'CHANGE_INPUT_VALUE';
+export const ADD_VALUE_LIST = 'ADD_VALUE_LIST';
