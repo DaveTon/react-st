@@ -19,6 +19,7 @@ export default (state = defaultState, action) => {
             return newState;
 
         case constants.DELETE_ITEM:
+            console.log(action.index)
             newState.list.splice(action.index, 1)
             return newState;
 

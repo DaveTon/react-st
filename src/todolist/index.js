@@ -23,7 +23,7 @@ const Todolist = (props) => {
                         return(
                             <li
                                 key={index}
-                                onClick={handelDeleteItem}
+                                onClick={handelDeleteItem.bind(this, index)}
                             >{item}</li>
                         )
                     })
