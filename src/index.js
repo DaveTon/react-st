@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Router from './router';
+import { Provider } from 'react-redux';
 
-const rootElement = document.getElementById('root');
+import Router from './router';
+import './resource/scss/essential-ui.scss';
+import store from './store';
 
 ReactDOM.render(
-    <Router />,
-    rootElement
+    <Provider store={store}>
+        <Router />
+    </Provider>,
+    document.getElementById('root')
 )

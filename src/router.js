@@ -1,5 +1,4 @@
 import React from 'react';
-import './resource/scss/essential-ui.scss';
 
 class Router extends React.Component{
     render(){
