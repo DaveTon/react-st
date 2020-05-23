@@ -16,7 +16,9 @@ class Header extends React.Component{
                         <div className='eu-search'>
                             <div className='search'>
                                 <input className='eu-input' placeholder='请输入' />
-                                <button className='eu-button'></button>
+                                <button className='eu-button'>
+                                    <i className='iconfont search'></i>
+                                </button>
                             </div>
                             <div className='list'>
                                 <div className='item'></div>

@@ -14,6 +14,16 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  .iconfont {
+    &.search:before {
+      content: "\e615";
+    }
+
+  }
+  
+
+  // -----
   
   .iconshang:before {
     content: "\e611";
@@ -107,9 +117,7 @@
     content: "\e600";
   }
   
-  .iconsousuo:before {
-    content: "\e615";
-  }
+
   
   .iconyuedu:before {
     content: "\e67e";
