@@ -87,4 +87,16 @@
     .eu-button{
         height: 36px;
     }
+    .eu-button.normal{
+        min-width: 96px;
+        // line-height: 24px;
+        border-radius: 20px;
+        font-size: 15px;
+        color: #fff;
+        background-color: #ea6f5a;
+        .iconfont{
+            padding: 2px;
+            margin-right: 4px;
+        }
+    }
 }
