@@ -27,7 +27,21 @@ class Header extends React.Component{
                     </nav>
 
                     <div className='eu-btnGroup'>
-                        <button className='eu-button'></button>
+                        <button className='eu-button'>
+                            <i className='iconfont jewel'></i>
+                        </button>
+                        <button className='eu-button'>
+                            <i className='iconfont jewel'></i>
+                        </button>
+                        <button className='eu-button'>
+                            <i className='iconfont jewel'></i>
+                        </button>
+                        <button className='eu-button'>
+                            <i className='iconfont jewel'></i>
+                        </button>
+                        <button className='eu-button'>
+                            <i className='iconfont jewel'></i>
+                        </button>
                     </div>
                 </div>
             </header>

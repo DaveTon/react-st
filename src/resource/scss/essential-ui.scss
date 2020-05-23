@@ -19,6 +19,9 @@
     &.search:before {
       content: "\e615";
     }
+    &.jewel:before {
+      content: "\e60d";
+    }
 
   }
   
@@ -29,9 +32,7 @@
     content: "\e611";
   }
   
-  .iconzuanshi:before {
-    content: "\e60d";
-  }
+
   
   .iconyou:before {
     content: "\e60a";

@@ -83,5 +83,8 @@
 }
 
 .eu-btnGroup{
-    margin-left: auto;
+    margin: 6px 0 6px auto;
+    .eu-button{
+        height: 36px;
+    }
 }
