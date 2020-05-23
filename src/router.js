@@ -1,14 +1,16 @@
 import React from 'react';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 
-class Router extends React.Component{
-    render(){
-        return(
-            <div>
-                <h1>Hello World</h1>
-                <button className='iconfont iconshang'></button>
-            </div>
-        )
-    }
+import Home from './layout/home'
+
+const Router = () => {
+    return(
+        <HashRouter>
+            <Switch>
+                <Route exact path='/' component={Home} />
+            </Switch>
+        </HashRouter>
+    )
 }
 
 export default Router;
