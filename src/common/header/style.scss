@@ -18,3 +18,32 @@
     background-size: contain;
     cursor: pointer;
 }
+
+.eu-nav{
+    margin: 0 120px;
+    display: flex;
+
+    .menu{
+        line-height: 56px;
+        padding: 0 8px;
+        min-width: 80px;
+        max-width: 120px;
+        margin: 0 8px;
+        text-align: center;
+        background: transparent;
+        cursor: pointer;
+
+        &:hover{
+            background: #eee;
+        }
+    }
+}
+
+.eu-search{
+    margin: 0 8px;
+    padding: 0 8px;
+}
+
+.eu-btnGroup{
+    margin-left: auto;
+}

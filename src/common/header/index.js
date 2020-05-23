@@ -8,7 +8,22 @@ class Header extends React.Component{
             <header className='eu-header'>
                 <div className='wrap'>
                     <div className='eu-logo'></div>
-                    <nav className='eu-nav'></nav>
+
+                    <nav className='eu-nav'>
+                        <div className='menu'>首页</div>
+                        <div className='menu'>App下载</div>
+                        
+                        <div className='eu-search'>
+                            <div className='search'>
+                                <input className='eu-input' placeholder='请输入' />
+                                <button className='eu-button'></button>
+                            </div>
+                            <div className='list'>
+                                <div className='item'></div>
+                            </div>
+                        </div>
+                    </nav>
+
                     <div className='eu-btnGroup'>
                         <button className='eu-button'></button>
                     </div>
