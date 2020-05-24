@@ -27,22 +27,24 @@ class Header extends React.Component{
                     </nav>
 
                     <div className='eu-btnGroup'>
-                        <button className='eu-button'>
-                            <i className='iconfont jewel'></i>
-                        </button>
-                        <button className='eu-button'>
-                            <i className='iconfont jewel'></i>
-                        </button>
-                        <button className='eu-button'>
-                            <i className='iconfont jewel'></i>
-                        </button>
-                        <button className='eu-button'>
-                            <i className='iconfont jewel'></i>
-                        </button>
-                        <button className='eu-button normal'>
-                            <i className='iconfont jewel'></i>
-                            <span className='text'>写文章</span>
-                        </button>
+                        <div className='list'>
+                            <button className='eu-button'>
+                                <i className='iconfont jewel'></i>
+                            </button>
+                            <button className='eu-button'>
+                                <i className='iconfont jewel'></i>
+                            </button>
+                            <button className='eu-button'>
+                                <i className='iconfont jewel'></i>
+                            </button>
+                            <button className='eu-button normal'>
+                                <span className='text'>注册</span>
+                            </button>
+                            <button className='eu-button normal active'>
+                                <i className='iconfont jewel'></i>
+                                <span className='text'>写文章</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </header>
