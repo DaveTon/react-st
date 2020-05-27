@@ -29,19 +29,19 @@ class Header extends React.Component{
                     <div className='eu-btnGroup'>
                         <div className='list'>
                             <button className='eu-button'>
-                                <i className='iconfont jewel'></i>
+                                <span className='text'>Aa</span>
                             </button>
                             <button className='eu-button'>
                                 <i className='iconfont jewel'></i>
                             </button>
-                            <button className='eu-button'>
-                                <i className='iconfont jewel'></i>
+                            <button className='eu-button pure'>
+                                <span className='text'>登陆</span>
                             </button>
                             <button className='eu-button normal'>
                                 <span className='text'>注册</span>
                             </button>
                             <button className='eu-button normal active'>
-                                <i className='iconfont jewel'></i>
+                                <i className='iconfont write'></i>
                                 <span className='text'>写文章</span>
                             </button>
                         </div>

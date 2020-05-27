@@ -52,9 +52,6 @@
     cursor: pointer;
     background: transparent;
     outline: transparent;
-    &:hover{
-        background: rgb(231, 231, 231);
-    }
 }
 
 .search{
@@ -78,7 +75,7 @@
         width: 28px;
         line-height: 28px;
         border-radius: 20px;
-        font-size: 14px;
+        font-size: 15px;
     }
 }
 
@@ -86,6 +83,12 @@
     margin-left: auto;
     .list{
         margin: 5px 0;
+        >.eu-button{
+            margin-left: 8px;
+            margin-right: 8px;
+            font-size: 15px;
+            color: #969696;
+        }
     }
     .eu-button:not(.normal){
         height: 36px;
@@ -106,6 +109,18 @@
             border: none;
             color: #fff;
         }
+        .iconfont{
+            padding: 2px;
+            margin-right: 4px;
+        }
+    }
+    .eu-button.pure{
+        min-width: 56px;
+        height: 36px;
+        border-radius: 20px;
+        font-size: 15px;
+        color: #969696;
+        padding: 0 12px;
         .iconfont{
             padding: 2px;
             margin-right: 4px;
