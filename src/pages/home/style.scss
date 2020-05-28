@@ -1,0 +1,233 @@
+.container{
+    display: flex;
+}
+
+.note-list{
+    flex: 2;
+
+    .note-item{
+        padding: 4px 0 20px 0;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        flex-flow: row-reverse;
+    }
+
+    .row-img{
+        width: 150px;
+        height: 100%;
+
+        .img{
+            height: inherit;
+            width: inherit;
+            border-radius: 5px;
+        }
+    }
+
+    .row-list:not(:only-child){
+        padding-right: 18px;
+    }
+
+    .title{
+        color: #333;
+        display: inherit;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.5;
+        margin-bottom: 8px;
+        display: inline-block;
+        text-decoration: none;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    .abstract{
+        margin: 0 0 8px;
+        font-size: 13px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #999;
+    }
+
+    .meta{
+        font-weight: 400;
+        line-height: 20px;
+        display: flex;
+
+        .eu-button{
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            padding: 2px 1px;
+            font-size: 12px;
+            line-height: 16px;
+            color: #b4b4b4;
+
+            &.diamond{
+                color: #ea6f5a; 
+                cursor: default;
+                display: inline;
+
+                .icon{
+                    font-size: 10px;
+                }
+            }
+
+            &.label{
+
+                &:hover{
+                    color: #666;
+                }
+            }
+
+            &.like{
+                cursor: default;
+                display: inline;
+            }
+        }
+
+        .icon{
+            font-size: 12px;
+            margin-right: 4px;
+        }
+    }
+}
+
+.aside-list{
+    flex: 1;
+
+    .wrap{
+        margin-left: 30px;
+        // padding: 4px 0;
+    }
+
+    .board{
+        margin-bottom: 20px;
+    }
+
+    .authors{
+        margin: 20px 0;
+        padding: 4px 0;
+
+        .header{
+            margin: 12px 0 4px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .img-wrap{
+        width: 280px;
+        height: 100%;
+
+        .img{
+            height: inherit;
+            width: inherit;
+        }
+    }
+
+    .eu-button.title{
+        font-size: 14px;
+        color: #666;
+        font-weight: 600;
+        cursor: default;
+    }
+    
+    .eu-button.refresh{
+        color: #666;
+        opacity: .8;
+
+        &:hover{
+            opacity: 1;
+        }
+    
+        .icon{
+            font-size: 12px;
+            margin-right: 8px;
+        }
+    }
+    
+    .eu-button.img{
+        height: 48px;
+        width: 48px;
+        overflow: hidden;
+        border-radius: 24px;
+    
+        .img{
+            height: inherit;
+            width: inherit;
+        }
+    }
+}
+
+.author-list{
+    padding: 4px 0;
+
+    .item{
+        margin: 8px 0;
+        padding: 4px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .follow{
+        margin: 4px auto 4px 8px;
+
+        .title{
+            font-size: 14px;
+            display: block;
+            margin: 2px 0 4px 0;
+            padding: 1px 0;
+            font-weight: 400;
+        }
+
+        .content{
+            margin: 2px 0;
+            font-size: 12px;
+            color: #969696;
+            font-weight: 400;
+        }
+    }
+
+    .eu-button.plus{
+        margin: 4px 0 4px 4px;
+        padding: 2px 0 2px 2px;
+        font-size: 12px;
+        color: #42c02e;
+        opacity: .8;
+
+        &:hover{
+            opacity: 1;
+        }
+
+        .icon{
+            font-size: 12px;
+            margin-right: 4px;
+        }
+    }
+}
+
+.side-tool{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+
+    .eu-button{
+        color: #999;
+        height: 40px;
+        width: 40px;
+        border: 1px solid #999;
+        background-color: #fff;
+        opacity: .4;
+
+        &:hover{
+            opacity: .8;
+        }
+
+        .icon{
+            transform: rotate(-90deg);
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.aside{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: 86px 0 0;
+    padding: 0 0 30px;
+    width: 280px;
+    overflow: auto;
+    border-right: 1px solid #f0f0f0;
+}
+
+.aside-header{
+    padding-right: 24px;
+    .header{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        box-shadow: 0 1px 0 0 #eee;
+        .eu-button{
+            font-size: 13px;
+        }
+
+        .eu-button.add{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+.aside-follow-list{
+    padding: 2px 24px 2px 0;
+
+    .item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        border-radius: 5px;
+        padding: 0 2px;
+        margin: 2px 0;
+        cursor: pointer;
+
+        &:hover{
+            background-color: rgba(238, 238, 238, 0.712);
+        }
+    }
+
+    .eu-button.img{
+        font-size: 15px;
+        color: #333;
+    }
+
+    .item-label{
+        font-size: 15px;
+        color: #333;
+        font-weight: 400;
+        margin: 2px;
+        padding: 2px;
+    }
+}

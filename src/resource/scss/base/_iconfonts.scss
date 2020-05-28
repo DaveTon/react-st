@@ -1,0 +1,139 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('../../fonts/iconfont.eot');
+  src: url('../../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('../../fonts/iconfont.woff2') format('woff2'),
+      url('../../fonts/iconfont.woff') format('woff'),
+      url('../../fonts/iconfont.ttf') format('truetype'),
+      url('../../fonts/iconfont.svg#iconfont') format('svg');
+}
+
+.icon {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.search::before{
+    content: '\e615';
+  }
+
+  &.close::before{
+    content: '\e600';
+  }
+
+  &.clock::before{
+    content: '\e60e';
+  }
+
+  &.msg::before{
+    content: '\e608';
+  }
+
+  &.edit::before{
+    content: '\e62c';
+  }
+
+  &.find::before{
+    content: '\e654';
+  }
+
+  &.follow::before{
+    content: '\e67e';
+  }
+
+  &.switch::before{
+    content: '\e61b';
+  }
+
+  &.vallet::before{
+    content: '\e613';
+  }
+
+  // --- user ---
+
+  &.user::before{
+    content: '\e61f';
+  }
+
+  &.dropdown::before{
+    content: '\ec0f';
+  }
+
+  &.bookmark::before{
+    content: '\e610';
+  }
+
+  &.set::before{
+    content: '\e61d';
+  }
+
+  &.paid::before{
+    content: '\e639';
+  }
+
+  &.like::before{
+    content: '\e645';
+  }
+
+  &.help::before{
+    content: '\e61c';
+  }
+
+  &.exit::before{
+    content: '\e659';
+  }
+
+  // --- massage --
+
+  &.comments::before{
+    content: '\e646';
+  }
+
+  &.chats::before{
+    content: '\e624';
+  }
+
+  &.requests::before{
+    content: '\e609';
+  }
+
+  &.likes::before{
+    content: '\e614';
+  }
+
+  &.follows::before{
+    content: '\e685';
+  }
+
+  &.money::before{
+    content: '\e634';
+  }
+
+  &.others::before{
+    content: '\e66b';
+  }
+
+  // --- 
+
+  &.plus::before{
+    content: '\e647';
+  }
+  
+  &.refresh::before{
+    content: '\e6cd';
+  }
+
+  &.dropright::before{
+    content: '\e60a';
+  }
+
+  &.diamond::before{
+    content: '\e60d';
+  }
+
+  &.reward::before{
+    content: '\e611';
+  }
+}
