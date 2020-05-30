@@ -4,28 +4,28 @@
         "authorList": [{
             "id": 1,
             "userName": "卢璐说",
-            "imgUrl": "/src/resource/imgs/home/test1.jpg",
+            "imgUrl": "https://upload.jianshu.io/users/upload_avatars/9988193/fc26c109-1ae6-4327-a298-2def343e9cd8.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp",
             "article": 1213000,
             "follow": false,
             "like": 269000
         },{
             "id": 2,
             "userName": "卢璐说",
-            "imgUrl": "../../resource/imgs/home/test1.jpg",
+            "imgUrl": "https://upload.jianshu.io/users/upload_avatars/9988193/fc26c109-1ae6-4327-a298-2def343e9cd8.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp",
             "article": 1213000,
             "follow": false,
             "like": 269000
         },{
             "id": 3,
             "userName": "卢璐说",
-            "imgUrl": "../../resource/imgs/home/test1.jpg",
+            "imgUrl": "https://upload.jianshu.io/users/upload_avatars/9988193/fc26c109-1ae6-4327-a298-2def343e9cd8.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp",
             "article": 1213000,
             "follow": false,
             "like": 269000
         },{
             "id": 4,
             "userName": "卢璐说",
-            "imgUrl": "../../resource/imgs/home/test1.jpg",
+            "imgUrl": "https://upload.jianshu.io/users/upload_avatars/9988193/fc26c109-1ae6-4327-a298-2def343e9cd8.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp",
             "article": 1213000,
             "follow": false,
             "like": 269000
