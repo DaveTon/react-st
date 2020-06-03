@@ -25,35 +25,35 @@ class Follow extends React.Component{
                         <div className='item'>
                             <button className='eu-button img img-head'>
                                 <img className='img' src={head} alt='user' />
-                                <span class="label">WEB前端之路</span>
+                                <span className="label">WEB前端之路</span>
                             </button>
                             <span className='item-label'>95</span>
                         </div>
                         <div className='item'>
                             <button className='eu-button img img-head'>
                                 <img className='img' src={head} alt='user' />
-                                <span class="label">WEB前端之路</span>
+                                <span className="label">WEB前端之路</span>
                             </button>
                             <span className='item-label'>95</span>
                         </div>
                         <div className='item'>
                             <button className='eu-button img img-head'>
                                 <img className='img' src={head} alt='user' />
-                                <span class="label">WEB前端之路</span>
+                                <span className="label">WEB前端之路</span>
                             </button>
                             <span className='item-label'>95</span>
                         </div>
                         <div className='item'>
                             <button className='eu-button img img-head'>
                                 <img className='img' src={head} alt='user' />
-                                <span class="label">WEB前端之路</span>
+                                <span className="label">WEB前端之路</span>
                             </button>
                             <span className='item-label'>95</span>
                         </div>
                         <div className='item'>
                             <button className='eu-button img img-head'>
                                 <img className='img' src={head} alt='user' />
-                                <span class="label">WEB前端之路</span>
+                                <span className="label">WEB前端之路</span>
                             </button>
                             <span className='item-label'>95</span>
                         </div>
