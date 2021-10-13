@@ -48,10 +48,14 @@ class Todolist extends Component{
         })
     }
     handelButtonClick(){
-        this.setState({
-            list: [...this.state.list, this.state.inputValue],
-            inputValue: ''
-        })
+        if(this.state.inputValue !== ''){
+            this.setState({
+                list: [...this.state.list, this.state.inputValue],
+                inputValue: ''
+            })
+        }else{
+            alert('请输入内容')
+        }
     }
     handelDeleteItem(index){
         const list = [...this.state.list];
