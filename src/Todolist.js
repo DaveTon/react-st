@@ -14,7 +14,10 @@ class Todolist extends Component{
         return (
             <div>
                 <div>
-                    <input />
+                    <input 
+                        value={this.state.inputValue}
+                        onChange={this.handelInputChange.bind(this)}
+                    />
                     <button>提交</button>
                 </div>
                 <ul>
@@ -23,6 +26,12 @@ class Todolist extends Component{
             </div>
         )
     }
+    handelInputChange(e){
+        this.setState({
+            inputValue: e.target.value
+        })
+    }
+
 }
 
 export default Todolist;
