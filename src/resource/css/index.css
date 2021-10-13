@@ -1,0 +1,15 @@
+body {
+  height: auto;
+}
+
+body h1 {
+  color: aquamarine;
+}
+
+body span {
+  width: 32px;
+}
+
+body p {
+  background-color: white;
+}
