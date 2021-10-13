@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import './resource/css/index.css';
 
 class Todolist extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            inputValue: '',
+            list: []
+        }
+    }
+
     render(){
         return (
             <div>
