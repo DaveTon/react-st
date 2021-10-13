@@ -1,12 +1,43 @@
-body{
-    height: auto;
-    h1{
-        color: aquamarine;
+.label{
+    font-size: 16px;
+    line-height: 36px;
+    color: rgba( #000000, .8);
+}
+
+.input{
+    height: 26px;
+    width: 240px;
+    border: 1px solid #eee;
+    padding: 4px 8px;
+    margin: 0 6px;
+    line-height: 28px;
+    color: rgba( #000000, .8);
+    font-size: 16px;
+    border-radius: 3px;
+    outline: 0;
+    transition: border-color ease-in-out .2s;
+    &:hover, &:active{
+        border-color: royalblue!important;
     }
-    span{
-        width: 32px;
+    &::placeholder{
+        color: #999;
+        font-size: 16px;
     }
-    p{
-        background-color: white;
+}
+
+.button{
+    height: 36px;
+    width: auto;
+    border: 1px solid #eee;
+    padding: 4px 12px;
+    margin: 0 6px;
+    line-height: 28px;
+    background-color: royalblue;
+    color: #fff;
+    border-radius: 3px;
+    outline: 0;
+    transition: background-color ease-in-out .2s;
+    &:hover, &:active{
+        background-color: rgba($color: royalblue, $alpha: .8);
     }
 }

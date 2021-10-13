@@ -14,13 +14,18 @@ class Todolist extends Component{
         return (
             <div>
                 <div>
+                    <label className="label" htmlFor="insertArea">请输入: </label>
                     <input 
+                        id="insertArea"
+                        className="input"
+                        placeholder="输入内容"
                         value={this.state.inputValue}
                         onChange={this.handelInputChange.bind(this)}
                     />
                     <button
+                        className="button"
                         onClick={this.handelButtonClick.bind(this)}
-                    >提交</button>
+                    >提 交</button>
                 </div>
                 <ul>
                     {
