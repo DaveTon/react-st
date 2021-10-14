@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Todoitem from './Todoitem';
-import './resource/css/index.css';
+import './resource/css/index.min.css';
 
 class Todolist extends Component{
     constructor(props){
