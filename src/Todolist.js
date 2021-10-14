@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Todoitem from './Todoitem';
 import './resource/css/index.css';
 
 class Todolist extends Component{
@@ -8,6 +9,9 @@ class Todolist extends Component{
             inputValue: '',
             list: []
         }
+        this.handelInputChange=this.handelInputChange.bind(this);
+        this.handelButtonClick=this.handelButtonClick.bind(this);
+        this.handelDeleteItem=this.handelDeleteItem.bind(this);
     }
 
     render(){
@@ -20,51 +24,54 @@ class Todolist extends Component{
                         className="input"
                         placeholder="输入内容"
                         value={this.state.inputValue}
-                        onChange={this.handelInputChange.bind(this)}
+                        onChange={this.handelInputChange}
                     />
                     <button
                         className="button"
-                        onClick={this.handelButtonClick.bind(this)}
+                        onClick={this.handelButtonClick}
                     >提 交</button>
                 </div>
-                <ul>
-                    {
-                        this.state.list.map((item,index)=>{
-                            return (
-                                <li
-                                    key={item}
-                                    onClick={this.handelDeleteItem.bind(this,index)}
-                                >{item}</li>
-                            )
-                        })
-                    }
-                </ul>
+                <ul>{this.getTodoItem()}</ul>
             </div>
         )
     }
-    handelInputChange(e){
-        this.setState({
-            inputValue: e.target.value
+    getTodoItem(){
+        return this.state.list.map((item,index)=>{
+            return(
+                <Todoitem 
+                    item={item}
+                    index={index}
+                    key={item}
+                    handelDeleteItem={this.handelDeleteItem}
+                />
+            )
         })
+    }
+    handelInputChange(e){
+        const value = e.target.value;
+        this.setState(()=>({
+            inputValue: value
+        }))
     }
     handelButtonClick(){
         if(this.state.inputValue !== ''){
-            this.setState({
-                list: [...this.state.list, this.state.inputValue],
-                inputValue: ''
+            this.setState((prevState)=>{
+                return{
+                    list: [...prevState.list, prevState.inputValue],
+                    inputValue: ''
+                }
             })
         }else{
             alert('请输入内容')
         }
     }
     handelDeleteItem(index){
-        const list = [...this.state.list];
-        list.splice(index, 1);
-        this.setState({
-            list: list
+        this.setState((prevState)=>{
+            const list = [...prevState.list];
+            list.splice(index, 1);
+            return {list}
         })
     }
-
 }
 
 export default Todolist;
