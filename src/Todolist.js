@@ -31,7 +31,7 @@ class Todolist extends Component{
                         onClick={this.handelButtonClick}
                     >提 交</button>
                 </div>
-                <ul>{this.getTodoItem()}</ul>
+                <ul className="list">{this.getTodoItem()}</ul>
             </div>
         )
     }
