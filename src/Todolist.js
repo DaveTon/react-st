@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Todoitem from './Todoitem';
-import './resource/css/index.css';
+import './resource/css/index.min.css';
 
 class Todolist extends Component{
     constructor(props){
@@ -31,7 +31,7 @@ class Todolist extends Component{
                         onClick={this.handelButtonClick}
                     >提 交</button>
                 </div>
-                <ul>{this.getTodoItem()}</ul>
+                <ul className="list">{this.getTodoItem()}</ul>
             </div>
         )
     }
