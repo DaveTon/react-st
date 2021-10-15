@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// import DefaultProps from 'default-props';
 
 class Todoitem extends Component{
     constructor(props){
