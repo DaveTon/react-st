@@ -6,6 +6,13 @@ class Todoitem extends Component{
         super(props)
         this.deleteItem=this.deleteItem.bind(this);
     }
+    shouldComponentUpdate(nextProps, nextStates){
+        if(nextProps.item !== this.props.item){
+            return true
+        }else{
+            return false
+        }
+    }
     render(){
         const { item, test } = this.props
         return(
