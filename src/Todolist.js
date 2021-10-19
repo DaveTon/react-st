@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Todoitem from './Todoitem';
+import axios from 'axios';
 import './resource/css/index.min.css';
 
 class Todolist extends Component{
@@ -34,6 +35,12 @@ class Todolist extends Component{
                 <ul className="list">{this.getTodoItem()}</ul>
             </div>
         )
+    }
+    //借助axios在componentDidMount中发布ajax请求
+    componentDidMount(){
+        axios.get('/api/todolist/resource')
+        .then(()=>{alert('succ')})
+        .catch(()=>{alert('error')})
     }
     getTodoItem(){
         return this.state.list.map((item,index)=>{
