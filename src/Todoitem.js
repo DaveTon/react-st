@@ -6,6 +6,7 @@ class Todoitem extends Component{
         super(props)
         this.deleteItem=this.deleteItem.bind(this);
     }
+    
     //优化子组件，数据没更新时，不重新渲染子组件
     shouldComponentUpdate(nextProps){
         if(nextProps.item !== this.props.item){
