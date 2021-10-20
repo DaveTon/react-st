@@ -20,7 +20,8 @@ body{
     font-size: 16px;
     border-radius: 3px;
     outline: 0;
-    transition: border-color ease-in-out .2s;
+    // transition: border-color ease-in-out .2s;
+    animation: color-animation 2s ease-in;
     &:hover, &:active{
         border-color: royalblue!important;
     }
@@ -54,5 +55,17 @@ body{
     li{
         line-height: 24px;
         padding: 2px 0;
+    }
+}
+
+@keyframes color-animation {
+    0%{
+        color: red;
+    }
+    50%{
+        color: green;
+    }
+    100%{
+        color: hotpink;
     }
 }

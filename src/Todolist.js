@@ -36,10 +36,13 @@ class Todolist extends Component{
             </div>
         )
     }
+
     //借助axios在componentDidMount中发布ajax请求
     componentDidMount(){
-        axios.get('/api/todolist/resource')
-        .then(()=>{alert('succ')})
+        axios.get('/api/todolist')
+        .then((res)=>{
+            console.log(res.data)
+        })
         .catch(()=>{alert('error')})
     }
     getTodoItem(){
