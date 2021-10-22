@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import Todoitem from './Todoitem';
-import axios from 'axios';
-import './resource/css/index.min.css';
+// import Todoitem from './Todoitem';
+// import axios from 'axios';
+import { Input, Button, List} from 'antd';
+import 'antd/dist/antd.css';
+import store from './store';
+// import './resource/css/index.min.css';
 
 class Todolist extends Component{
     constructor(props){
         super(props);
-        this.state = {
-            inputValue: '',
-            list: []
-        }
+        this.state = store.getState();
         this.handelInputChange=this.handelInputChange.bind(this);
         this.handelButtonClick=this.handelButtonClick.bind(this);
         this.handelDeleteItem=this.handelDeleteItem.bind(this);
@@ -18,43 +18,29 @@ class Todolist extends Component{
     render(){
         return (
             <div>
-                <div>
-                    <label className="label" htmlFor="insertArea">请输入: </label>
-                    <input 
+                <div style={{marginTop: "20px", marginLeft: "20px"}}>
+                    <Input 
+                        style={{width: "360px", marginRight: "8px"}}
                         id="insertArea"
-                        className="input"
                         placeholder="输入内容"
                         value={this.state.inputValue}
                         onChange={this.handelInputChange}
                     />
-                    <button
-                        className="button"
+                    <Button
+                        type="primary"
+                        placeholder="Basic usage"
                         onClick={this.handelButtonClick}
-                    >提 交</button>
+                    >提 交</Button>
                 </div>
-                <ul className="list">{this.getTodoItem()}</ul>
+                <List
+                    style={{width: "360px", marginLeft: "20px", marginTop: "8px"}}
+                    size="small"
+                    bordered
+                    dataSource={this.state.list}
+                    renderItem={item => <List.Item>{item}</List.Item>}
+                />
             </div>
         )
-    }
-    //借助axios在componentDidMount中发布ajax请求
-    componentDidMount(){
-        axios.get('/api/todolist')
-        .then((res)=>{
-            console.log(res.data)
-        })
-        .catch(()=>{alert('error')})
-    }
-    getTodoItem(){
-        return this.state.list.map((item,index)=>{
-            return(
-                <Todoitem 
-                    item={item}
-                    index={index}
-                    key={item}
-                    handelDeleteItem={this.handelDeleteItem}
-                />
-            )
-        })
     }
     handelInputChange(e){
         const value = e.target.value;
