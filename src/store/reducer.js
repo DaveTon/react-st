@@ -3,10 +3,16 @@ const defaultState = {
     list: [1,2,3]
 }
 
-export default (state = defaultState, action) => {
+const state = (state = defaultState, action) => {
     if(action.type === 'CHANGE_INPUT_VALUE'){
         const newState = JSON.parse(JSON.stringify(state));
         newState.inputValue = action.inputValue;
+        return newState;
+    }
+    if(action.type === 'ADD_TODO_ITEM'){
+        const newState = JSON.parse(JSON.stringify(state));
+        newState.list.push(newState.inputValue);
+        newState.inputValue = ''
         return newState;
     }
     return state;
@@ -19,3 +25,5 @@ export default (state = defaultState, action) => {
     //         return state;
     // }
 }
+
+export default state;
