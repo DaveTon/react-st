@@ -11,8 +11,13 @@ class Todolist extends Component{
         super(props);
         this.state = store.getState();
         this.handelInputChange=this.handelInputChange.bind(this);
-        this.handelButtonClick=this.handelButtonClick.bind(this);
-        this.handelDeleteItem=this.handelDeleteItem.bind(this);
+        // this.handelButtonClick=this.handelButtonClick.bind(this);
+        // this.handelDeleteItem=this.handelDeleteItem.bind(this);
+        this.handelStoreChange=this.handelStoreChange.bind(this);
+        store.subscribe(this.handelStoreChange)
+    }
+    handelStoreChange(){
+        this.setState(store.getState())
     }
 
     render(){
@@ -29,7 +34,7 @@ class Todolist extends Component{
                     <Button
                         type="primary"
                         placeholder="Basic usage"
-                        onClick={this.handelButtonClick}
+                        // onClick={this.handelButtonClick}
                     >提 交</Button>
                 </div>
                 <List
@@ -43,30 +48,32 @@ class Todolist extends Component{
         )
     }
     handelInputChange(e){
-        const value = e.target.value;
-        this.setState(()=>({
-            inputValue: value
-        }))
-    }
-    handelButtonClick(){
-        if(this.state.inputValue !== ''){
-            this.setState((prevState)=>{
-                return{
-                    list: [...prevState.list, prevState.inputValue],
-                    inputValue: ''
-                }
-            })
-        }else{
-            alert('请输入内容')
+        // const value = e.target.value;
+        const action = {
+            type: 'CHANGE_INPUT_VALUE',
+            inputValue: e.target.value
         }
+        store.dispatch(action)
     }
-    handelDeleteItem(index){
-        this.setState((prevState)=>{
-            const list = [...prevState.list];
-            list.splice(index, 1);
-            return {list}
-        })
-    }
+    // handelButtonClick(){
+    //     if(this.state.inputValue !== ''){
+    //         this.setState((prevState)=>{
+    //             return{
+    //                 list: [...prevState.list, prevState.inputValue],
+    //                 inputValue: ''
+    //             }
+    //         })
+    //     }else{
+    //         alert('请输入内容')
+    //     }
+    // }
+    // handelDeleteItem(index){
+    //     this.setState((prevState)=>{
+    //         const list = [...prevState.list];
+    //         list.splice(index, 1);
+    //         return {list}
+    //     })
+    // }
 }
 
 export default Todolist;
