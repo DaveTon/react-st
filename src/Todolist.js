@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import { Input, Button, List} from 'antd';
 import 'antd/dist/antd.css';
 import store from './store';
+import {changeInputValue, addTodoItem, deleteTodoItem} from './store/actionCreatoes';
 // import './resource/css/index.min.css';
 
 class Todolist extends Component{
@@ -13,6 +14,11 @@ class Todolist extends Component{
         this.handelInputChange=this.handelInputChange.bind(this);
         this.handelButtonClick=this.handelButtonClick.bind(this);
         this.handelDeleteItem=this.handelDeleteItem.bind(this);
+        this.handelStoreChange=this.handelStoreChange.bind(this);
+        store.subscribe(this.handelStoreChange)
+    }
+    handelStoreChange(){
+        this.setState(store.getState())
     }
 
     render(){
@@ -37,36 +43,30 @@ class Todolist extends Component{
                     size="small"
                     bordered
                     dataSource={this.state.list}
-                    renderItem={item => <List.Item>{item}</List.Item>}
+                    renderItem={(item, index) => <List.Item onClick={this.handelDeleteItem.bind(this,index)}>{item}</List.Item>}
                 />
             </div>
         )
     }
     handelInputChange(e){
-        const value = e.target.value;
-        this.setState(()=>({
-            inputValue: value
-        }))
+        const action = changeInputValue(e.target.valeu)
+        store.dispatch(action)
     }
     handelButtonClick(){
-        if(this.state.inputValue !== ''){
-            this.setState((prevState)=>{
-                return{
-                    list: [...prevState.list, prevState.inputValue],
-                    inputValue: ''
-                }
-            })
-        }else{
-            alert('请输入内容')
-        }
+        const action = addTodoItem()
+        store.dispatch(action);
     }
     handelDeleteItem(index){
-        this.setState((prevState)=>{
-            const list = [...prevState.list];
-            list.splice(index, 1);
-            return {list}
-        })
+        const action = deleteTodoItem(index)
+        store.dispatch(action);
     }
+    // handelDeleteItem(index){
+    //     this.setState((prevState)=>{
+    //         const list = [...prevState.list];
+    //         list.splice(index, 1);
+    //         return {list}
+    //     })
+    // }
 }
 
 export default Todolist;
