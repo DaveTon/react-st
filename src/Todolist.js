@@ -12,12 +12,13 @@ class Todolist extends Component{
         this.handelButtonClick=this.handelButtonClick.bind(this);
         this.handelDeleteItem=this.handelDeleteItem.bind(this);
         this.handelStoreChange=this.handelStoreChange.bind(this);
+    }
+    componentDidMount(){
         store.subscribe(this.handelStoreChange)
     }
     handelStoreChange(){
         this.setState(store.getState())
     }
-
     render(){
         const {inputValue, list} = this.state;
         return (
