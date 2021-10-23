@@ -15,6 +15,11 @@ const state = (state = defaultState, action) => {
         newState.inputValue = ''
         return newState;
     }
+    if(action.type === 'DELETE_TODO_ITEM'){
+        const newState = JSON.parse(JSON.stringify(state));
+        newState.list.splice(newState.index, 1);
+        return newState;
+    }
     return state;
     // switch(action.type){
     //     case 'CHANGE_INPUT_VALUE':

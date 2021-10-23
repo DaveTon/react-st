@@ -12,7 +12,7 @@ class Todolist extends Component{
         this.state = store.getState();
         this.handelInputChange=this.handelInputChange.bind(this);
         this.handelButtonClick=this.handelButtonClick.bind(this);
-        // this.handelDeleteItem=this.handelDeleteItem.bind(this);
+        this.handelDeleteItem=this.handelDeleteItem.bind(this);
         this.handelStoreChange=this.handelStoreChange.bind(this);
         store.subscribe(this.handelStoreChange)
     }
@@ -42,7 +42,7 @@ class Todolist extends Component{
                     size="small"
                     bordered
                     dataSource={this.state.list}
-                    renderItem={item => <List.Item>{item}</List.Item>}
+                    renderItem={(item, index) => <List.Item onClick={this.handelDeleteItem.bind(this,index)}>{item}</List.Item>}
                 />
             </div>
         )
@@ -57,6 +57,13 @@ class Todolist extends Component{
     handelButtonClick(){
         const action = {
             type: 'ADD_TODO_ITEM'
+        }
+        store.dispatch(action);
+    }
+    handelDeleteItem(index){
+        const action = {
+            type: 'DELETE_TODO_ITEM',
+            index
         }
         store.dispatch(action);
     }
