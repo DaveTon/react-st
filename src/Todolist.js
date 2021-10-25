@@ -17,7 +17,7 @@ class Todolist extends Component{
     }
     componentDidMount(){
         store.subscribe(this.handelStoreChange);
-        axios.get('./api/todolist.json')
+        axios.get('/api/todolist.json')
         .then((res)=>{
             const data = res.data;
             console.log(data)
