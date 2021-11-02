@@ -4,7 +4,6 @@ import store from './store';
 import TodolistUI from './TodolistUI';
 import {getTodoListInit, changeInputValue, addTodoItem, deleteTodoItem} from './store/actionCreatoes';
 
-
 class Todolist extends Component{
     constructor(props){
         super(props);
