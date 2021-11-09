@@ -6,8 +6,11 @@ class Todolist extends Component{
         return(
             <div>
                 <div>
-                    <input value={this.props.inputValue} />
-                    <button>提交</button>
+                    <input 
+                        value={this.props.inputValue} 
+                        onChange={this.props.handelInputChange}
+                    />
+                    <button onClick={this.props.handelBtnClick}>提交</button>
                 </div>
                 <ul>
                     {
@@ -28,7 +31,21 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-
+    return {
+        handelInputChange(e){
+            const action={
+                type: "CHANGE_INPUT_VALUE",
+                value: e.target.value
+            }
+            dispatch(action)
+        },
+        handelBtnClick(){
+            const action={
+                type:"ADD_INPUT_VALUE"
+            }
+            dispatch(action)
+        }
+    }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Todolist);
