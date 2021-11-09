@@ -6,11 +6,15 @@ class Todolist extends Component{
         return(
             <div>
                 <div>
-                    <input placeholder={this.props.inputValue} />
+                    <input value={this.props.inputValue} />
                     <button>提交</button>
                 </div>
                 <ul>
-                    <li>Hello</li>
+                    {
+                        this.props.list.map((item,index)=>{
+                            return <li key={index}>{item}</li>
+                        })
+                    }
                 </ul>
             </div>
         )
@@ -18,12 +22,13 @@ class Todolist extends Component{
 }
 const mapStateToProps = (state) => {
     return {
-        inputValue: state.inputValue
+        inputValue: state.inputValue,
+        list: state.list
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
-    
+
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Todolist);
