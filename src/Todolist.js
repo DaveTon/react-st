@@ -16,12 +16,14 @@ class Todolist extends Component{
         )
     }
 }
-const mapStateToProps = (state) => ({
-    inputValue: state.inputValue
-})
+const mapStateToProps = (state) => {
+    return {
+        inputValue: state.inputValue
+    }
+}
 
-const mapDispatchToProps = (dispatch) => ({
-
-})
+const mapDispatchToProps = (dispatch) => {
+    
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(Todolist);
