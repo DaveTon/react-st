@@ -10,7 +10,4 @@ const APP = (
   </Provider>
 )
 
-ReactDOM.render(
-  APP,
-  document.getElementById('root')
-);
+ReactDOM.render(APP, document.getElementById('root'));

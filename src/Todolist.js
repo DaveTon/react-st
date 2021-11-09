@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import connect from 'react-redux';
+import {connect} from 'react-redux';
 
 class Todolist extends Component{
     render(){
@@ -20,4 +20,8 @@ const mapStateToProps = (state) => ({
     inputValue: state.inputValue
 })
 
-export default connect(mapStateToProps, null)(Todolist);
+const mapDispatchToProps = (dispatch) => ({
+
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Todolist);
