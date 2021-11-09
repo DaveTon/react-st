@@ -1,51 +1,23 @@
-import React, { Component } from 'react';
-import 'antd/dist/antd.css';
-import store from './store';
-import TodolistUI from './TodolistUI';
-import {getTodoListInit, changeInputValue, addTodoItem, deleteTodoItem} from './store/actionCreatoes';
-
+import React, { Component } from 'react'
+import connect from 'react-redux';
 
 class Todolist extends Component{
-    constructor(props){
-        super(props);
-        this.state = store.getState();
-        this.handelInputChange=this.handelInputChange.bind(this);
-        this.handelButtonClick=this.handelButtonClick.bind(this);
-        this.handelDeleteItem=this.handelDeleteItem.bind(this);
-        this.handelStoreChange=this.handelStoreChange.bind(this);
-    }
-    componentDidMount(){
-        store.subscribe(this.handelStoreChange);
-        const action = getTodoListInit();
-        store.dispatch(action);
-    }
-    handelStoreChange(){
-        this.setState(store.getState())
-    }
     render(){
-        const {inputValue, list} = this.state;
-        return (
-            <TodolistUI 
-                inputValue={inputValue}
-                list={list}
-                handelInputChange={this.handelInputChange}
-                handelButtonClick={this.handelButtonClick}
-                handelDeleteItem={this.handelDeleteItem}
-            />
+        return(
+            <div>
+                <div>
+                    <input placeholder={this.props.inputValue} />
+                    <button>提交</button>
+                </div>
+                <ul>
+                    <li>Hello</li>
+                </ul>
+            </div>
         )
     }
-    handelInputChange(e){
-        const action = changeInputValue(e.target.valeu)
-        store.dispatch(action)
-    }
-    handelButtonClick(){
-        const action = addTodoItem()
-        store.dispatch(action);
-    }
-    handelDeleteItem(index){
-        const action = deleteTodoItem(index)
-        store.dispatch(action);
-    }
 }
+const mapStateToProps = (state) => ({
+    inputValue: state.inputValue
+})
 
-export default Todolist;
+export default connect(mapStateToProps, null)(Todolist);
