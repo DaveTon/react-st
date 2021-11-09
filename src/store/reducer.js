@@ -13,6 +13,9 @@ export default (state = defaultState, action) => {
             newState.list.push(newState.inputValue);
             newState.inputValue = ''
             return newState;
+        case "HANDEL_DELETE_ITEM":
+            newState.list.splice(action.index, 1)
+            return newState
         default:
             return state;
     }
